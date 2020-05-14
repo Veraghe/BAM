@@ -8,6 +8,7 @@ class Evenement
     private $_descriptionEvenement;
     private $_auteurEvenement;
     private $_lieuEvenement;
+    private $_dateCreation;
     private $_idUtilisateur;    
     private $_idCategorie;
 
@@ -72,6 +73,15 @@ class Evenement
         $this->_lieuEvenement = $_lieuEvenement;
     }
 
+    public function getDateCreation()
+    {
+        return $this->_dateCreation;
+    }
+
+    public function setDateCreation($_dateCreation)
+    {
+        $this->_dateCreation = $_dateCreation;
+    }
     public function getIdUtilisateur()
     {
         return $this->_idUtilisateur;
@@ -113,6 +123,7 @@ class Evenement
     {
         return $this->getIdEvenement() . $this->getLibelleEvenement() . $this->getDateEvenement() . $this->getDescriptionEvenement() . $this->getAuteurEvenement(). $this->getLieuEvenement() . $this->getIdUtilisateur() . $this->getIdCategorie();
     }
+
 
 
 

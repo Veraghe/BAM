@@ -3,7 +3,7 @@ class UtilisateurManager
 {
     public static function add(Utilisateur $obj)
     {
-        var_dump($obj);
+
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO utilisateurs(pseudo, emailUtilisateur, motDePasse, role, telephoneUtilisateur, nomUtilisateur, prenomUtilisateur) VALUES (:pseudo, :emailUtilisateur, :motDePasse, :role, :telephoneUtilisateur, :nomUtilisateur, :prenomUtilisateur) ");
         $q->bindValue(":pseudo", $obj->getPseudo());
@@ -55,7 +55,7 @@ class UtilisateurManager
         {
 		$db = DbConnect::getDb (); // Instance de PDO.
 		// Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-		$q = $db->prepare ( 'SELECT pseudo, motDePasse, idUtilisateur, role FROM utilisateurs WHERE pseudo = :pseudo' );
+		$q = $db->prepare ( 'SELECT pseudo,emailUtilisateur,motDePasse,role,telephoneUtilisateur,nomUtilisateur,prenomUtilisateur,idUtilisateur FROM utilisateurs WHERE pseudo = :pseudo' );
 		
 		// Assignation des valeurs .
 		$q->bindValue ( ':pseudo', $pseudo );

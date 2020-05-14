@@ -3,7 +3,6 @@ class CategorieManager
 {
     public static function add(Categorie $obj)
     {
-        var_dump($obj);
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO categories (idCategorie,libelleCategorie) VALUES (:idCategorie,:libelleCategorie)");
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
@@ -14,7 +13,7 @@ class CategorieManager
     public static function update(Categorie $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE categories SET  libelleCategorie=:libelleCategorie WHERE idCategorie=:idCategorie");
+        $q = $db->prepare("UPDATE categories SET libelleCategorie=:libelleCategorie WHERE idCategorie=:idCategorie");
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
         $q->bindValue(":libelleCategorie", $obj->getLibelleCategorie());
         $q->execute();
