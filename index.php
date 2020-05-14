@@ -27,3 +27,41 @@ Parametre::init();
 //on active la connexion à la base de données
 DbConnect::init();
 session_start();
+
+$routes= [
+    //Accueil
+    "default" => ["php/view/", "Agenda","Agenda"],
+
+    //Pour les utlisateurs
+    "connexion" => ["php/view", "Connexion", "Connexion"],
+    "inscription"=>["php/view", "Inscription", "Inscription"],
+    "deconnexion" =>["php/view" , "Deconnexion","Deconnexion"],
+
+    //Pour les inscrits
+    "formEvenement"=> ["php/view","FormEvenement","FormEvenement"],
+
+    //Pour les admins
+    "admin"=> ["php/view", "Admin", "Admin"],
+    "categorie"=>["php/view","FormCategorie","FormCategorie"],
+    "listeUtilisateur"=>["php/view", "ListeUtilisateur","ListeUtilisateur"],
+    "listeEvenement"=>["php/view", "ListeEvenement","ListeEvenement"]
+];
+
+if (isset($_GET["action"]))
+{
+    $action =$_GET["action"];
+
+    if(isset($routes[$action]))
+    {
+        AfficherPage($toutes[$action]);
+    }
+    else
+    {
+        AfficherPage($routes["default"]);
+    }
+
+}
+else
+{
+    AfficherPage($routes["default"]);
+}
