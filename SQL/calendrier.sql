@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 14 mai 2020 à 12:07
--- Version du serveur :  5.7.24
--- Version de PHP :  7.2.14
+-- Généré le :  jeu. 14 mai 2020 à 10:02
+-- Version du serveur :  5.7.28
+-- Version de PHP :  7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,16 +32,16 @@ USE `calendrier`;
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
-  `idCategorie` int(11) NOT NULL AUTO_INCREMENT,
-  `libelleCategorie` varchar(50) NOT NULL,
-  PRIMARY KEY (`idCategorie`)
+  `IdCategorie` int(11) NOT NULL AUTO_INCREMENT,
+  `LibelleCategorie` varchar(50) NOT NULL,
+  PRIMARY KEY (`IdCategorie`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
-INSERT INTO `categories` (`idCategorie`, `libelleCategorie`) VALUES
+INSERT INTO `categories` (`IdCategorie`, `LibelleCategorie`) VALUES
 (1, 'Concert'),
 (2, 'Manifestation'),
 (3, 'Culture'),
@@ -58,23 +58,23 @@ DROP TABLE IF EXISTS `evenements`;
 CREATE TABLE IF NOT EXISTS `evenements` (
   `idEvenement` int(11) NOT NULL AUTO_INCREMENT,
   `libelleEvenement` varchar(150) NOT NULL,
-  `dateEvenement` date NOT NULL,
-  `descriptionEvenement` varchar(500) NOT NULL,
-  `auteurEvenement` varchar(50) NOT NULL,
-  `lieuEvenement` varchar(50) NOT NULL,
-  `dateCreation` date NOT NULL,
+  `DateEvenement` date NOT NULL,
+  `DescriptionEvenement` varchar(500) NOT NULL,
+  `AuteurEvenement` varchar(50) NOT NULL,
+  `LieuEvenement` varchar(50) NOT NULL,
+  `DateCreation` date NOT NULL,
   `idUtilisateur` int(11) NOT NULL,
-  `idCategorie` int(11) NOT NULL,
+  `IdCategorie` int(11) NOT NULL,
   PRIMARY KEY (`idEvenement`),
   KEY `Evenements_Utilisateurs_FK` (`idUtilisateur`),
-  KEY `Evenements_Categories_FK` (`idCategorie`)
+  KEY `Evenements_Categories_FK` (`IdCategorie`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `evenements`
 --
 
-INSERT INTO `evenements` (`idEvenement`, `libelleEvenement`, `dateEvenement`, `descriptionEvenement`, `auteurEvenement`, `lieuEvenement`, `dateCreation`, `idUtilisateur`, `idCategorie`) VALUES
+INSERT INTO `evenements` (`idEvenement`, `libelleEvenement`, `DateEvenement`, `DescriptionEvenement`, `AuteurEvenement`, `LieuEvenement`, `DateCreation`, `idUtilisateur`, `IdCategorie`) VALUES
 (1, 'Marché aux légumes', '2020-05-16', 'un Marché aux légumes ouvert à tous', 'Alison', 'Parking Mairie', '2020-05-14', 1, 5),
 (2, 'Concert de Booba', '2020-06-10', 'Concert de Booba', 'Booba', 'Salle ', '2020-05-14', 2, 1);
 
@@ -87,13 +87,13 @@ INSERT INTO `evenements` (`idEvenement`, `libelleEvenement`, `dateEvenement`, `d
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
-  `pseudo` varchar(50) NOT NULL,
-  `emailUtilisateur` varchar(150) NOT NULL,
-  `motDePasse` varchar(50) NOT NULL,
-  `role` int(11) NOT NULL,
-  `telephoneUtilisateur` int(11) DEFAULT NULL,
-  `nomUtilisateur` varchar(50) NOT NULL,
-  `prenomUtilisateur` varchar(150) NOT NULL,
+  `PseudoUtilisateur` varchar(50) NOT NULL,
+  `EmailUtilisateur` varchar(150) NOT NULL,
+  `MotDePasse` varchar(50) NOT NULL,
+  `Role` int(11) NOT NULL,
+  `TelephoneUtilisateur` int(11) DEFAULT NULL,
+  `NomUtilisateur` varchar(50) NOT NULL,
+  `PrenomUtilisateur` varchar(150) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
 -- Déchargement des données de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`idUtilisateur`, `pseudo`, `emailUtilisateur`, `motDePasse`, `role`, `telephoneUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`) VALUES
+INSERT INTO `utilisateurs` (`idUtilisateur`, `PseudoUtilisateur`, `EmailUtilisateur`, `MotDePasse`, `Role`, `TelephoneUtilisateur`, `NomUtilisateur`, `PrenomUtilisateur`) VALUES
 (1, 'AlisonV', 'alison@alison.fr', 'alison', 1, NULL, 'Veraghe', 'Alison'),
 (2, 'MathysC', 'Mathys@mathys.fr', 'mathys', 2, NULL, 'Colin', 'Mathys');
 
@@ -113,7 +113,7 @@ INSERT INTO `utilisateurs` (`idUtilisateur`, `pseudo`, `emailUtilisateur`, `motD
 -- Contraintes pour la table `evenements`
 --
 ALTER TABLE `evenements`
-  ADD CONSTRAINT `Evenements_Categories_FK` FOREIGN KEY (`idCategorie`) REFERENCES `categories` (`idCategorie`),
+  ADD CONSTRAINT `Evenements_Categories_FK` FOREIGN KEY (`IdCategorie`) REFERENCES `categories` (`IdCategorie`),
   ADD CONSTRAINT `Evenements_Utilisateurs_FK` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`idUtilisateur`);
 COMMIT;
 
