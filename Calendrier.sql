@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 14 mai 2020 à 09:52
+-- Généré le :  jeu. 14 mai 2020 à 10:02
 -- Version du serveur :  5.7.28
 -- Version de PHP :  7.3.12
 
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `calendrier`
 --
+CREATE DATABASE IF NOT EXISTS `calendrier` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `calendrier`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `IdCategorie` int(11) NOT NULL AUTO_INCREMENT,
+  `LibelleCategorie` varchar(50) NOT NULL,
+  PRIMARY KEY (`IdCategorie`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `categories`
+--
+
+INSERT INTO `categories` (`IdCategorie`, `LibelleCategorie`) VALUES
+(1, 'Concert'),
+(2, 'Manifestation'),
+(3, 'Culture'),
+(4, 'Sport'),
+(5, 'Marché');
 
 -- --------------------------------------------------------
 
@@ -51,6 +77,33 @@ CREATE TABLE IF NOT EXISTS `evenements` (
 INSERT INTO `evenements` (`idEvenement`, `libelleEvenement`, `DateEvenement`, `DescriptionEvenement`, `AuteurEvenement`, `LieuEvenement`, `DateCreation`, `idUtilisateur`, `IdCategorie`) VALUES
 (1, 'Marché aux légumes', '2020-05-16', 'un Marché aux légumes ouvert à tous', 'Alison', 'Parking Mairie', '2020-05-14', 1, 5),
 (2, 'Concert de Booba', '2020-06-10', 'Concert de Booba', 'Booba', 'Salle ', '2020-05-14', 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `PseudoUtilisateur` varchar(50) NOT NULL,
+  `EmailUtilisateur` varchar(150) NOT NULL,
+  `MotDePasse` varchar(50) NOT NULL,
+  `Role` int(11) NOT NULL,
+  `TelephoneUtilisateur` int(11) DEFAULT NULL,
+  `NomUtilisateur` varchar(50) NOT NULL,
+  `PrenomUtilisateur` varchar(150) NOT NULL,
+  PRIMARY KEY (`idUtilisateur`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`idUtilisateur`, `PseudoUtilisateur`, `EmailUtilisateur`, `MotDePasse`, `Role`, `TelephoneUtilisateur`, `NomUtilisateur`, `PrenomUtilisateur`) VALUES
+(1, 'AlisonV', 'alison@alison.fr', 'alison', 1, NULL, 'Veraghe', 'Alison'),
+(2, 'MathysC', 'Mathys@mathys.fr', 'mathys', 2, NULL, 'Colin', 'Mathys');
 
 --
 -- Contraintes pour les tables déchargées
