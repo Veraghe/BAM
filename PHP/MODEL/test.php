@@ -61,8 +61,8 @@ DbConnect::init();
 /************************Test Evenement********************/
 
 //add
-// $e= new Evenement(["libelleEvenement"=>"Tournoi Ping Pong","dateEvenement"=>"2020-05-14","descriptionEvenement"=>"ping","auteurEvenement"=>"Nico","lieuEvenement"=>"Gymnase","dateCreation"=>"2020-05-14","idUtilisateur"=>"2","idCategorie"=>"4"]);
-// EvenementManager::add($e);OK
+// $e= new Evenement(["libelleEvenement"=>"Tournoi Ping Pong","dateEvenement"=>"2020-06-10","descriptionEvenement"=>"ping","auteurEvenement"=>"Nico","lieuEvenement"=>"Gymnase","dateCreation"=>"2020-05-14","idUtilisateur"=>"2","idCategorie"=>"4"]);
+// EvenementManager::add($e);
 
 //update
 // $e= EvenementManager::getById(3);
@@ -77,6 +77,8 @@ DbConnect::init();
 // $tab=EvenementManager::getListByDate("2020-06-10");
 // foreach($tab as $date)
 // {
+
 //     echo $date->toString();
-// Pas Bon
+
+// }Test effectué avec un id et cela renvoie bien une liste, la requete en BDD direct fonctionne également avec une date, le problème viendrait peut être du format de la date en paramètre
 

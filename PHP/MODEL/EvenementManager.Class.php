@@ -56,7 +56,7 @@ class EvenementManager
 
         $db = DbConnect::getDb();
         $tableau = [];
-        $q = $db->query("SELECT * FROM evenements WHERE dateEvenement=$dateEvenement");
+        $q = $db->query("SELECT * FROM evenements WHERE dateEvenement=".$dateEvenement);
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
         {
             if ($donnees != false)
