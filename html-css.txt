@@ -1,0 +1,11 @@
+font awesome:
+<i class="fas fa-user-circle"></i>
+
+oeil (connexion):
+<i class="fas fa-eye"></i>
+
+corbeille (liste):
+<i class="fas fa-trash"></i>
+
+modifier (liste):
+<i class="fas fa-edit"></i>
