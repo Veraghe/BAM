@@ -1,0 +1,41 @@
+<body>
+    <div class="titre">
+        <p>Ajouter un évènement</p>
+    </div>
+    <div class="formulaire">
+        <form method="post" action="index.php?action=">    
+            <fieldset>
+                <legend>Ajouter un évènement</legend>
+                <div class="colonne">
+                    <div> 
+                        <label for="libelleEvenement">Nom de l'évènement :</label>
+                        <input name="libelleEvenement" type="text" id="libelleEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="lieuEvenement">Lieu : </label>
+                        <input type="lieuEvenement" id="text" name="lieuEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="auteurEvenement">L'auteur :</label>
+                        <input name="auteurEvenement" type="text" id="auteurEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="dateEvenement">Date : </label>
+                        <input type="text" id="dateEvenement" name="dateEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="libelleCategorie">Catégorie :</label>
+                        <input name="libelleCategorie" type="text" id="libelleCategorie" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="descriptionEvenement">Description : </label>
+                        <input type="text" id="descriptionEvenement" name="descriptionEvenement" required pattern/>
+                    </div>
+                </div>
+            </fieldset> 
+            <div class="centrer">
+                <input class="bouton centrer" type="submit" value="Valider" />
+            </div>
+        </form>
+    </div>
+</body>
