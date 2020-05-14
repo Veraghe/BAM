@@ -71,7 +71,7 @@ class Evenement
     {
         $this->_lieuEvenement = $_lieuEvenement;
     }
-    
+
     public function getIdUtilisateur()
     {
         return $this->_idUtilisateur;
@@ -111,7 +111,7 @@ class Evenement
 /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdEvenement() . $this->getLibelleEvenement() . $this->getDateEvenement() . $this->getDescriptionEvenement() . $this->getAuteurEvenement(). $this->getLieuEvenement() . $this->getIdCategorie();
+        return $this->getIdEvenement() . $this->getLibelleEvenement() . $this->getDateEvenement() . $this->getDescriptionEvenement() . $this->getAuteurEvenement(). $this->getLieuEvenement() . $this->getIdUtilisateur() . $this->getIdCategorie();
     }
 
 
