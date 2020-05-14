@@ -8,6 +8,7 @@ class Evenement
     private $_descriptionEvenement;
     private $_auteurEvenement;
     private $_lieuEvenement;
+    private $_idUtilisateur;    
     private $_idCategorie;
 
 /******************************Accesseurs*******************************/
@@ -70,7 +71,16 @@ class Evenement
     {
         $this->_lieuEvenement = $_lieuEvenement;
     }
+    
+    public function getIdUtilisateur()
+    {
+        return $this->_idUtilisateur;
+    }
 
+    public function setIdUtilisateur($_idUtilisateur)
+    {
+        $this->_idUtilisateur = $_idUtilisateur;
+    }
     public function getIdCategorie()
     {
         return $this->_idCategorie;
@@ -103,5 +113,7 @@ class Evenement
     {
         return $this->getIdEvenement() . $this->getLibelleEvenement() . $this->getDateEvenement() . $this->getDescriptionEvenement() . $this->getAuteurEvenement(). $this->getLieuEvenement() . $this->getIdCategorie();
     }
+
+
 
 }
