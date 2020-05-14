@@ -82,4 +82,41 @@ class Utilisateur
     {
         $this->_nomUtilisateur = $_nomUtilisateur;
     }
+    public function getPrenomUtilisateur()
+    {
+        return $this->_prenomUtilisateur;
+    }
+
+    public function setPrenomUtilisateur($_prenomUtilisateur)
+    {
+        $this->_prenomUtilisateur = $_prenomUtilisateur;
+    }
+/*******************************Construct*******************************/
+public function __construct(array $options = [])
+    {
+        if (!empty($options))
+        {
+            $this->hydrate($options);
+        }
+    }
+
+    public function hydrate($data)
+    {
+        foreach ($data as $key => $value) {
+            $methode = "set" . ucfirst($key);
+            if (is_callable(([$this, $methode])))
+            {
+                $this->$methode($value);
+            }
+        }
+    }
+/****************************Autres méthodes****************************/
+public function toString() 
+{ 
+ return $this->getIdUtilisateur() . $this->getPseudo() . $this->getEmailUtilisateur() . $this->getMotDePasse() . $this->getRole() . $this->getTelephoneUtilisateur() . $this->getNomUtilisateur() . $this->getPrenomUtilisateur() ;
+}
+
+
+
+
 }
