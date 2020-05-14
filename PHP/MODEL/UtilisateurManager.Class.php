@@ -6,7 +6,7 @@ class UtilisateurManager
         var_dump($obj);
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO utilisateurs(pseudo, emailUtilisateur, motDePasse, role, telephoneUtilisateur, nomUtilisateur, prenomUtilisateur) VALUES (:pseudo, :emailUtilisateur, :motDePasse, :role, :telephoneUtilisateur, :nomUtilisateur, :prenomUtilisateur) ");
-        $q->bindValue(":pseudoUtilisateur", $obj->getPseudoUtilisateur());
+        $q->bindValue(":pseudo", $obj->getPseudo());
         $q->bindValue(":emailUtilisateur", $obj->getEmailUtilisateur());
         $q->bindValue(":motDePasse", $obj->getMotDePasse());
         $q->bindValue(":role", $obj->getRole());
@@ -21,7 +21,7 @@ class UtilisateurManager
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE utilisateurs SET pseudo=:pseudo, emailUtilisateur=:emailUtilisateur, motDePasse=:motDePasse, role=:role, telephoneUtilisateur=:telephoneUtilisateur, nomUtilisateur=:nomUtilisateur, prenomUtilisateur=:prenomUtilisateur WHERE idUtilisateur=:idUtilisateur");
         $q->bindValue(":idUtilisateur", $obj->getIdUtilisateur());
-        $q->bindValue(":pseudoUtilisateur", $obj->getPseudoUtilisateur());
+        $q->bindValue(":pseudo", $obj->getPseudo());
         $q->bindValue(":emailUtilisateur", $obj->getEmailUtilisateur());
         $q->bindValue(":motDePasse", $obj->getMotDePasse());
         $q->bindValue(":role", $obj->getRole());

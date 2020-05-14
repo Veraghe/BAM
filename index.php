@@ -10,6 +10,7 @@ function ChargerClasse($classe)
     }
 }
 spl_autoload_register("ChargerClasse");
+
 function AfficherPage($page)
 {
     $chemin = $page[0];
