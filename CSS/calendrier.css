@@ -1,8 +1,19 @@
 body {
+
+}
+.calendrier{
     width: 210px;
     margin: 20px;
+    background-color: white;
+}
+.contenu {
+    display: flex;
 }
 
+.gauche,
+.droite {
+    flex: 1;
+}
 button {
     width: 30px;
     height: 30px;
