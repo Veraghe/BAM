@@ -1,16 +1,49 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/***HEADER****/
+
 header
 {
+    display: flex;
+    align-items: center;
     background-color: white;
 }
-.centre top
+.top
 {
-    justify-content: center;
+    flex:1;
+    text-align: left;
+    align-items: center;
 }
+.pseudo
+{
+    display:flex;
+}
+.pseudo i
+{
+    font-size: 3rem;
+    padding: 0 1vw;
+}
+.centre
+{
+    flex: 1;
+}
+
+/***AGENDA****/
+
 .global
 {
+    display: flex;
+    flex-direction: column;
     background-color: #2a4798;
+    align-items: center;
 }
 #categories
 {
-    justify-content: center;
+    flex:1;
+    margin-top: 20px;
 }

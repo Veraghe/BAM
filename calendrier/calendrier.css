@@ -1,0 +1,78 @@
+body {
+    width: 210px;
+    margin: 20px;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: transparent;
+    /*background-color: rgb(170,170,200);*/
+    /*border: 1px white solid;*/
+    float: left;
+    border: none;
+    box-sizing: border-box;
+}
+
+button:hover,
+button:hover {
+    cursor: pointer;
+}
+
+button.active {
+    background-color: rgb(240, 240, 240);
+}
+
+.head {
+    /* background-color: rgb(160,160,60);*/
+    display: flex;
+    height: 32px;
+    align-items: center;
+}
+
+.head div {
+    flex-grow: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#av,
+#ap {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.head2 {
+    display: flex;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    overflow: hidden;
+}
+
+section p:first-child {
+    float: left;
+}
+
+section p:last-child {
+    float: right;
+}
+
+section button {
+    /*background-color: rgb(100,100,100);*/
+    color: white;
+}
+
+h2 {
+    /*background-color: rgb(240,240,160);*/
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: grey;
+}
