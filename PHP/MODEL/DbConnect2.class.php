@@ -7,6 +7,7 @@ class DbConnect {
 	
 	public static function getDb() {
 		return DbConnect::$db;
+		
 	}
 
 	public static function init() {

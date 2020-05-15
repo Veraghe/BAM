@@ -1,5 +1,5 @@
 <?php
-Class Parametre
+class Parametre
 {
     
     static private $_host;
