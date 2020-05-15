@@ -11,15 +11,16 @@ function ChargerClasse($classe)
 }
 spl_autoload_register("ChargerClasse");
 
-Parametre::init();
+
+
 //on active la connexion à la base de données
 DbConnect::init();
 session_start();
 
 /**********************Test Categorie***************************/
 //add
-$c= new Categorie(["libelleCategorie"=>"Test"]);
-CategorieManager::add($c); 
+// $c= new Categorie(["libelleCategorie"=>"Test"]);
+// CategorieManager::add($c); 
 
 //update
 // $c=CategorieManager::getById(6);
@@ -76,14 +77,13 @@ CategorieManager::add($c);
 // EvenementManager::delete($e);OK
 
 //getListByDate
-// $event= new DateTime("2020-06-10");
+$event="2020-06-10";
+$tab=EvenementManager::getListByDate($event);
+foreach($tab as $date)
+{
 
-// $tab=EvenementManager::getListByDate($event);
-// foreach($tab as $date)
-// {
+    echo $date->toString()."\n";
 
-//     echo $date->toString();
-
-// }
-//Test effectué avec un id et cela renvoie bien une liste, la requete en BDD direct fonctionne également avec une date, le problème viendrait peut être du format de la date en paramètre
+}
+//ok
 
