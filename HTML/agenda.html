@@ -6,6 +6,7 @@
     <title>Page d'accueil</title>
     <link href="https://fonts.googleapis.com/css?family=Neucha|Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../CSS/calendrier.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
@@ -37,7 +38,12 @@
         <!--gauche-------------------------------------->
         <div class="gauche"> 
             <div class="calendrier"> 
-                <div class="ligne">
+                <div class="head2">
+                    <p><button class="av">&#8592;</button> </p>
+                    <p class="date"> </p>
+                    <p><button class="ap">&#8594;</button> </p>
+                </div>
+                <div class="head">
                     <div class="dayName">L</div>
                     <div class="dayName">M</div>
                     <div class="dayName">M</div>
@@ -46,6 +52,7 @@
                     <div class="dayName">S</div>
                     <div class="dayName">D</div>
                 </div>
+                <p class="cible"></p>
             </div>  
         </div> 
         <!--droite-------------------------------------->
@@ -74,5 +81,6 @@
      <!--FOOTER---------------------------------------------------------------------->
     <footer>
     </footer>
+    <script src="../JS/calendrier.js"></script>
 </body>
 </html>
