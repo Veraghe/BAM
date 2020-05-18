@@ -7,35 +7,35 @@
                 <div class="colonne">
                     <div> 
                         <label for="pseudo">Pseudo :</label>
-                        <input name="pseudo" type="text" id="pseudo" required pattern/>
+                        <input name="pseudo" type="text" id="pseudo" required pattern="^[A-ZÀ-Ý]{1}[a-zà-ý' -]*([ |-|'][A-ZÀ-Ý]{1}[a-zà-ý' -]*)?$"/>
                     </div>
                     <div> 
                         <label for="motDePasse">Mot de passe : </label>
-                        <input type="password" id="motDePasse" name="motDePasse" required pattern/>
+                        <input type="password" id="motDePasse" name="motDePasse" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#\$%\^&\*+])[a-zA-Z\d!@#\$%\^&\*+]{8,}$"/>
                     </div>
                     <div> 
                         <label for="confirm">Confirmation mot de passe : </label>
-                        <input type="password" id="confirm" name="confirm" required pattern/>
+                        <input type="password" id="confirm" name="confirm" required/>
                     </div>
                     <div class="rowInscription">
-                        <div> 
+                        <div class="espace1"> 
                             <label for="nomUtilisateur">Nom :</label>
-                            <input name="nomUtilisateur" type="text" id="nomUtilisateur" required pattern/>
+                            <input name="nomUtilisateur" type="text" id="nomUtilisateur" required pattern="^[A-ZÀ-Ý]{1}[a-zà-ý' -]*([ |-|'][A-ZÀ-Ý]{1}[a-zà-ý' -]*)?$"/>
                         </div>
 
-                        <div class="espase"> 
+                        <div class="espace2"> 
                             <label for="prenomUtilisateur">Prenom :</label>
-                            <input name="prenomUtilisateur" type="text" id="prenomUtilisateur" required pattern/>
+                            <input name="prenomUtilisateur" type="text" id="prenomUtilisateur" required pattern="^[A-ZÀ-Ý]{1}[a-zà-ý' -]*([ |-|'][A-ZÀ-Ý]{1}[a-zà-ý' -]*)?$"/>
                         </div>
                     </div>
 
                     <div> 
                         <label for="emailUtilisateur">Mail : </label>
-                        <input type="mail" id="emailUtilisateur" name="emailUtilisateur" required pattern/>
+                        <input type="mail" id="emailUtilisateur" name="emailUtilisateur" required pattern="^[a-zA-Z0-9-._]{2,}@[a-zA-Z0-9-]{2,}.[a-z]{2,}(.[a-z]{2,})?$"/>
                     </div>
                     <div> 
                         <label for="telephoneUtilisateur">Téléphone :</label>
-                        <input name="telephoneUtilisateur" type="number" id="telephoneUtilisateur" required pattern/>
+                        <input name="telephoneUtilisateur" type="number" id="telephoneUtilisateur" required pattern="^(0|\+33) ?[1-9]([-. ]?[\d]{2}){4}$"/>
                     </div>
                 </div>
             <div class="centrer">
