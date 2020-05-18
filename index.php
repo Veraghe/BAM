@@ -31,21 +31,21 @@ session_start();
 
 $routes= [
     //Accueil
-    "default" => ["php/view/", "Agenda","Agenda"],
+    "default" => ["PHP/VIEW/", "Agenda","Agenda"],
 
     //Pour les utlisateurs
-    "connexion" => ["php/view", "Connexion", "Connexion"],
-    "inscription"=>["php/view", "Inscription", "Inscription"],
-    "deconnexion" =>["php/view" , "Deconnexion","Deconnexion"],
+    "connexion" => ["PHP/VIEW/", "Connexion", "Connexion"],
+    "inscription"=>["PHP/VIEW/", "Inscription", "Inscription"],
+    "deconnexion" =>["PHP/VIEW/" , "Deconnexion","Deconnexion"],
 
     //Pour les inscrits
-    "formEvenement"=> ["php/view","FormEvenement","FormEvenement"],
+    "formEvenement"=> ["PHP/VIEW/","FormEvenement","FormEvenement"],
 
     //Pour les admins
-    "admin"=> ["php/view", "Admin", "Admin"],
-    "categorie"=>["php/view","FormCategorie","FormCategorie"],
-    "listeUtilisateur"=>["php/view", "ListeUtilisateur","ListeUtilisateur"],
-    "listeEvenement"=>["php/view", "ListeEvenement","ListeEvenement"]
+    "admin"=> ["PHP/VIEW/", "Admin", "Admin"],
+    "categorie"=>["PHP/VIEW/","FormCategorie","FormCategorie"],
+    "listeUtilisateur"=>["PHP/VIEW/", "ListeUtilisateur","ListeUtilisateur"],
+    "listeEvenement"=>["PHP/VIEW/", "ListeEvenement","ListeEvenement"]
 ];
 
 if (isset($_GET["action"]))
@@ -54,7 +54,7 @@ if (isset($_GET["action"]))
 
     if(isset($routes[$action]))
     {
-        AfficherPage($toutes[$action]);
+        AfficherPage($routes[$action]);
     }
     else
     {
