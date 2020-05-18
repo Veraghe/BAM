@@ -35,15 +35,28 @@ header
 
 /***AGENDA****/
 
-.global
-{
-    display: flex;
-    flex-direction: column;
-    background-color: #2a4798;
-    align-items: center;
-}
+
 #categories
 {
     flex:1;
     margin-top: 20px;
+}
+
+/***Tableau****/
+
+.tableau
+{
+    display: flex;
+    flex-direction: column;
+}
+.titre
+{
+    flex: 1;
+    text-transform: uppercase;
+    padding: 1vh 0;
+}
+.contenu
+{
+    flex: 1;
+    padding: 1vw;
 }
