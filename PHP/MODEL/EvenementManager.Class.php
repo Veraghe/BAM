@@ -57,15 +57,28 @@ class EvenementManager
         $db = DbConnect::getDb();
         $tableau = [];
         $q = $db->query("SELECT * FROM evenements WHERE dateEvenement='$dateEvenement' ");
-        while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
-        {
-            if ($donnees != false)
-            {
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
                 $tableau[] = new Evenement($donnees);
             }
-        
+
         }
         return $tableau;
+    }
+
+    //Fonction utiliser pour la liste des événements en attente
+    public static function getList()
+    {
+        $db = DbConnect::getDb();
+        $evenements = [];
+        $q = $db->query("SELECT * FROM evenements");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $evenements[] = new Evenement($donnees);
+            }
+        }
+        return $evenements;
+
     }
 
 }
