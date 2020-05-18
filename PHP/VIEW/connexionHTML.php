@@ -3,7 +3,7 @@
         <p>Connexion</p>
     </div>
     <div class="formulaire">
-        <form method="post" action="index.php?action=FormConnexion">    
+        <form method="post" action="index.php?action=default">    
             <fieldset>
                 <legend>Connexion</legend>
                 <div class="colonne">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </fieldset> 
-            <a href="index.php?action=UserForm&m=ajout">Pas encore inscrit ?</a>
+            <a href="index.php?action=inscription&m=ajout">Pas encore inscrit ?</a>
             <div class="centrer">
                 <input class="bouton centrer" type="submit" value="Connexion" />
             </div>

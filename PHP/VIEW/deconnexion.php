@@ -1,3 +1,5 @@
 <?php
 session_destroy();
-header('url=index.php?action=default');
+
+echo '<p>Vous êtes à présent déconnecté</p>';
+header('refresh:3,url=index.php?action=connexion');
