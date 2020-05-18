@@ -11,7 +11,7 @@
         
         <div class="centre top">
             <div class="logo">
-                <img src="logoville.png" alt="logo de la ville">
+                <img src="IMAGES/logoville.png" alt="logo de la ville">
             </div>
         </div>
 
