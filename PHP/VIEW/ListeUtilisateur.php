@@ -32,7 +32,7 @@
                 <div class="bloc contenu tailleP"><a href="index.php?action=inscription&m=suppr&id='.$elt->getIdUtilisateur().'"><i class="fas fa-trash"></i></a></div>
             </div>'; 
             } ?>
-         <div class="centrer">
+         <div class="centrer divBTN">
             <a href="index.php?action=inscription&m=ajout" class="bouton centrer">Ajouter un utilisateur</a>
         </div>
     </div>
