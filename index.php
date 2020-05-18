@@ -1,4 +1,4 @@
-<?PHP
+<?php
 
 function ChargerClasse($classe)
 {
