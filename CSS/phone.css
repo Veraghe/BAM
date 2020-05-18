@@ -2,6 +2,26 @@
 /* ----------------------------------------------MEDIA QUERIES 1200px ---- */
 /* ------------------------------------------------------------------------- */
 
+@media screen and (max-width: 1400px){
+        .global {
+            width: 70vw;
+        }
+
+        .calendrier {
+            width: 35vw;
+        }
+
+        button {
+            width: 5vw;
+            /* width calendrier/7=witdth du button */
+        }
+
+
+}
+/* ------------------------------------------------------------------------- */
+/* ----------------------------------------------MEDIA QUERIES 1200px ---- */
+/* ------------------------------------------------------------------------- */
+
 @media screen and (max-width: 1200px) {
     .global {
         width: 80vw;
@@ -46,10 +66,10 @@
 
 
 /* ------------------------------------------------------------------------- */
-/* ----------------------------------------------MEDIA QUERIES 600px ---- */
+/* ----------------------------------------------MEDIA QUERIES 800px ---- */
 /* ------------------------------------------------------------------------- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .global {
         width: 100vw;
     }
@@ -57,7 +77,16 @@
         flex-direction: column;
     }
     .calendrier {
-        width: 100vw;
+        width: 85vw;
+    }
+    .sommaire{
+        border-bottom: solid 10px #2a4798;
+    }
+    .gauche{
+        position: relative;
+    }
+    .droite{
+        margin: 15vw 3vw 3vw 3vw;
     }
 
     button {
