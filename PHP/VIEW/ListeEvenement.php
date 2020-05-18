@@ -32,7 +32,7 @@ $evenement = EvenementManager::getList();
             </div>'; 
             } ?>
 
-         <div class="centrer">
+         <div class="centrer divBTN">
             <a href="index.php?action=formEvenement&m=ajout" class="bouton centrer">Ajouter un évènements</a>
         </div>
     </div>

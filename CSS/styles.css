@@ -3,6 +3,7 @@ body
     font-family: 'Roboto', sans-serif;
     margin:0;
     padding:0;
+    background-color:#2a4798;
 }
 .titre{
     text-align: center;
@@ -54,12 +55,8 @@ header
 
 
 
-/***Tableau******************************/
+/***Tableau-Liste******************************/
 
-body
-{
-    background-color:#2a4798;
-}
 .tableau
 {
     background-color: white;
@@ -73,7 +70,6 @@ body
     margin:2vh 4vw;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 .titre
 {
@@ -100,10 +96,12 @@ body
 {
     flex: 1;
     justify-content: center
-}  
+}
+/*bouton******************/  
 .divBTN{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .bouton
 {
