@@ -44,10 +44,12 @@ header
 
 /***Tableau****/
 
-.tableau
+.ligne
 {
+    margin:2vh 4vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .titre
 {
@@ -55,8 +57,27 @@ header
     text-transform: uppercase;
     padding: 1vh 0;
 }
+.bloc
+{
+    padding-top: 2vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: grayscale(1);
+    transition: all .5s;
+    font-size: 1rem;
+    text-align: center;
+}
 .contenu
 {
     flex: 1;
-    padding: 1vw;
+    justify-content: center
+}  
+.centrer
+{
+
+    flex:1;
+    justify-content: center;
 }
+
+
