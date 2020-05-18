@@ -1,5 +1,7 @@
  <?php
 $categorie = CategorieManager::getList();
+$evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégrer: Quand on CLICK sur une date sur le calendrier, ça affiche l'évenement à gauche. 
+
 ?>
  <!--AGENDA---------------------------------------------------------------------->
     <div class="centrerGlobal">
@@ -69,19 +71,22 @@ $categorie = CategorieManager::getList();
                         <p>Le jour</p>
                     </div>
                     <div class="article">
-                        <div class="evenement">
-                            <p>Football</p>
+                        <?php
+                        foreach ($evenement as $elt) {
+                            echo '<div class="evenement">
+                            <p>'. $elt->getLibelleEvenement().'</p>
                         </div>
+
+                        <div class="lieu">
+                            <p>'. $elt->getLieuEvenement().'</p>
+                        </div>
+
                         <div class="description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
+                            <p>'. $elt->getDescriptionEvenement().'</p>
+                        </div>';
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
