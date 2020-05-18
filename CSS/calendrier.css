@@ -23,11 +23,20 @@
 /*************************************/
 .contenu {
     display: flex;
+    position: relative;
 }
 .gauche, .droite{
     background-color: white;
     margin: 3vw;
     flex: 1;
+}
+.droite{
+    margin: 3vw 3vw 3vw 0;
+}
+.gauche{
+    position: sticky;
+    max-height: 500px;
+    top: 20px;
 }
 .calendrier{
     width: 30vw;
@@ -156,5 +165,29 @@ button.active {
     text-align: center;
     line-height: 20px;
 }
-
-
+/************* DROITE******************************/
+.droite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw 3vw;
+}
+.droite .jour{
+    font-size: 2em;
+}
+.droite .border1,
+.droite .border2 {
+    height: 10px;
+    width: 80%;
+    background-color: #404040; /*voir en JS pour mettre la bonne couleur par rapport à la catégorie*/
+    border-radius: 20px ;
+}
+.border2{
+    margin-bottom: 3vw;
+}
+.article .evenement{
+    font-weight: bold;
+}
+.article .lieu{
+    font-size: 0.8em;
+}

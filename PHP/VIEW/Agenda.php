@@ -68,26 +68,28 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                 <!--droite-------------------------------------->
                 <div class="droite">
                     <div class="jour">
-                        <p>Le jour</p>
+                        <p>Date du calendrier</p>
                     </div>
-                    <div class="article">
-                        <?php
-                        foreach ($evenement as $elt) {
-                            echo '<div class="evenement">
-                            <p>'. $elt->getLibelleEvenement().'</p>
+                    
+                    <?php
+                    foreach ($evenement as $elt) {
+                    echo '<div class="border1"></div>
+                            <div class="article">
+                                <div class="evenement">
+                                    <p>'. $elt->getLibelleEvenement().'</p>
+                                </div>
+
+                                <div class="lieu">
+                                    <p>Lieu : '. $elt->getLieuEvenement().'</p>
+                                </div>
+
+                                <div class="description">
+                                    <p>'. $elt->getDescriptionEvenement().'</p>
+                                </div>
                         </div>
-
-                        <div class="lieu">
-                            <p>'. $elt->getLieuEvenement().'</p>
-                        </div>
-
-                        <div class="description">
-                            <p>'. $elt->getDescriptionEvenement().'</p>
-                        </div>';
-                        }
-                        ?>
-
-                    </div>
+                    <div class="border2"></div>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>
