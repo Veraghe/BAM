@@ -1,27 +1,23 @@
-<body>
-    <div class="titre">
-        <p>Connexion</p>
-    </div>
+
+<div class="titre">
+    <p>Connexion</p>
+</div>
+<div class="center">
     <div class="formulaire">
-        <form method="post" action="index.php?action=default">    
-            <fieldset>
-                <legend>Connexion</legend>
-                <div class="colonne">
-                    <div> 
+        <form method="post" action="index.php?action=default">
+                    <div>
                         <label for="pseudo">Pseudo :</label>
                         <input name="pseudo" type="text" id="pseudo" />
                     </div>
-                    <div> 
+                    <div class="password">
                         <label for="password">Mot de Passe :</label>
-                        <i class="fas fa-eye"></i>
                         <input type="password" name="password" id="password" />
+                        <div id="oeil"><i class="fas fa-eye"></i></div>
                     </div>
-                </div>
-            </fieldset> 
-            <a href="index.php?action=inscription&m=ajout">Pas encore inscrit ?</a>
-            <div class="centrer">
+            <a href="index.php?action=inscription&m=ajout" class="btnIncription">Pas encore inscrit ?</a>
+            <div class="centrer divBTN">
                 <input class="bouton centrer" type="submit" value="Connexion" />
             </div>
         </form>
     </div>
-</body>
+</div>

@@ -14,7 +14,7 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
             <?php
             if($action!="connexion"){
                 // if($pseudo!=""){
-                echo'<div class="nom">
+                echo'<div class="nomHeader">
                     <p>Bonjour</p>
                     <b>'.$pseudo.'</b>
                     <a href="index.php?action=deconnexion">Se déconnecter</a>
