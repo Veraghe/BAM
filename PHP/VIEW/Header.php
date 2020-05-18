@@ -1,12 +1,25 @@
+<?php
+//Attribution des variables de session
+$lvl = (isset($_SESSION['level'])) ? (int) $_SESSION['level'] : 1;
+$pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
+$action = (isset($_GET['action'])) ? $_GET['action'] : '';
+?>
+
 <body>
     <!--HEADER---------------------------------------------------------------------->
     <header>
         <div class="top pseudo">
             <a href="index.php?action=connexion"><i class="fas fa-user-circle"></i></a>
-            <div class="nom">
-                <p>Bonjour</p>
-                <b>pseudo</b>
-            </div>
+            <?php
+            if($action!="connexion" && $action !=""){
+                if($pseudo!=""){
+                echo'<div class="nom">
+                    <p>Bonjour</p>
+                    <b>'.$pseudo.'</b>
+                    <a href="index.php?action=deconnexion">Se déconnecter</a>
+                </div>';
+               } 
+            }?>
         </div>
         
         <div class="centre top">
