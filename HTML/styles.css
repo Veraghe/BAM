@@ -44,6 +44,18 @@ header
 
 /***Tableau****/
 
+body
+{
+    background-color:#2a4798;
+}
+.tableau
+{
+    background-color: white;
+    margin: 10vh;
+    padding: 3vh;
+    border-radius: 3vh;
+}
+
 .ligne
 {
     margin:2vh 4vw;
@@ -56,6 +68,10 @@ header
     flex: 1;
     text-transform: uppercase;
     padding: 1vh 0;
+    background-color: #404040;
+    margin: 0.1vh;
+    color: white;
+
 }
 .bloc
 {
@@ -73,11 +89,23 @@ header
     flex: 1;
     justify-content: center
 }  
-.centrer
+.bouton
 {
-
-    flex:1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #2a4798;
+    color: white;
+    padding: 1.8vh;
+    margin: 2vh;
+    border-radius: 1.3vh;
+}
+.nom
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
 }
 
 
