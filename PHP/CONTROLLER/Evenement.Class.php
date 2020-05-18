@@ -9,7 +9,8 @@ class Evenement
     private $_auteurEvenement;
     private $_lieuEvenement;
     private $_dateCreation;
-    private $_idUtilisateur;    
+    private $_idUtilisateur;
+    private $_categorieEvenement;    
     private $_idCategorie;
 
 /******************************Accesseurs*******************************/
@@ -91,6 +92,17 @@ class Evenement
     {
         $this->_idUtilisateur = $_idUtilisateur;
     }
+
+        public function getCategorieEvenement ()
+    {
+        return $this->_categorieEvenement;
+    }
+
+    public function setCategorieEvenement (Categorie $_categorieEvenement)
+    {
+        $this->_categorieEvenement = $_categorieEvenement;
+    }
+
     public function getIdCategorie()
     {
         return $this->_idCategorie;
@@ -99,6 +111,8 @@ class Evenement
     public function setIdCategorie($_idCategorie)
     {
         $this->_idCategorie = $_idCategorie;
+        $this->setCategorieEvenement(CategorieManager::getById($_idCategorie));
+
     }
 /*******************************Construct*******************************/
     public function __construct(array $options = [])
