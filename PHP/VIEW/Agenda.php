@@ -63,8 +63,16 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                             <div class="couleur-sommaire"></div>
                             <div class="categorie-sommaire"></div>
                         </div>
+                        <?php 
+                    if($pseudo !=null)
+                    {
+                       echo '<div class="centrer divBTN"><a href="index.php?action=formEvenement&m=ajout" class="bouton">Créer un évènement</a></div>';
+                
+                    }
+                    ?>
                     </div>
-                </div>
+                   
+                    </div>
                 <!--droite-------------------------------------->
                 <div class="droite">
                     <div class="jour">
