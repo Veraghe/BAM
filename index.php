@@ -45,7 +45,11 @@ $routes= [
     "admin"=> ["PHP/VIEW/", "Admin", "Admin"],
     "categorie"=>["PHP/VIEW/","FormCategorie","FormCategorie"],
     "listeUtilisateur"=>["PHP/VIEW/", "ListeUtilisateur","ListeUtilisateur"],
-    "listeEvenement"=>["PHP/VIEW/", "ListeEvenement","ListeEvenement"]
+    "listeEvenement"=>["PHP/VIEW/", "ListeEvenement","ListeEvenement"],
+
+    //action
+    "actionEvenement"=>["PHP/VIEW/", "ActionEvenement","ActionEvenement"],
+    "actionUtilisateur"=>["PHP/VIEW/", "ActionUtilisateur","ActionUtilisateur"]
 ];
 
 if (isset($_GET["action"]))
