@@ -21,7 +21,9 @@ else
             $_SESSION['nomUtilisateur']=$utilisateur->getNomUtilisateur();
             $_SESSION['prenomUtilisateur']=$utilisateur->getPrenomUtilisateur();
             $_SESSION['idUtilisateur']=$utilisateur->getIdUtilisateur();
-            header('url=index.php?action=default');
+           
+            header('refresh:0.5,url=index.php?action=default');
+           
         }
         else
         {

@@ -4,7 +4,7 @@
 </div>
 <div class="center">
     <div class="formulaire">
-        <form method="post" action="index.php?action=default">
+        <form method="post" action="index.php?action=connexion">
                     <div>
                         <label for="pseudo">Pseudo :</label>
                         <input name="pseudo" type="text" id="pseudo" />

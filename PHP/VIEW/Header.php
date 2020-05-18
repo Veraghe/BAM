@@ -12,15 +12,13 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
         <div class="top pseudo">
             <a href="index.php?action=connexion"><i class="fas fa-user-circle"></i></a>
             <?php
-            if($action!="connexion"){
-                // if($pseudo!=""){
+          if ($pseudo !=null){
                 echo'<div class="nomHeader">
                     <p>Bonjour</p>
                     <b>'.$pseudo.'</b>
                     <a href="index.php?action=deconnexion">Se déconnecter</a>
                 </div>';
-            //    } 
-            }
+             }
             ?>
         </div>
         

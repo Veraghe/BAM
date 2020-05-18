@@ -1,7 +1,7 @@
 <?php
 if(!isset($_POST['email']))
 {
-    include 'PHP/View/inscirptionHTML.php';
+    include 'PHP/View/inscriptionHTML.php';
 }
 else
 {
