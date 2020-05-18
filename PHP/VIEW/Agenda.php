@@ -1,13 +1,17 @@
+ <?php
+$categorie = CategorieManager::getList();
+?>
  <!--AGENDA---------------------------------------------------------------------->
     <div class="centrerGlobal">
         <div class="global">
             <select name="categories" id="categories">
-                <option value="Categories">Catégories</option>
-                <option value="Concert">Concert</option>
-                <option value="Manifestation">Manifestation</option>
-                <option value="Culture">Culture</option>
-                <option value="Sport">Sport</option>
-                <option value="Marche">Marché</option>
+                <?php
+                    foreach ($categorie as $elt) {
+                        echo '<option value = "' . $elt->getIdCategorie() . '"';
+                        echo 'selected ="' . $elt->getLibelleCategorie() . '"';
+                        echo ' >' . $elt->getLibelleCategorie() . ' </option>';
+                    }
+                    ?>
             </select>
             <!--gauche-------------------------------------->
             <div class="contenu">
