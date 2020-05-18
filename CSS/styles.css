@@ -67,9 +67,14 @@ header
 
 .ligne
 {
-    margin:2vh 4vw;
+    /* margin:2vh 4vw; */
+    padding: 0 1vw 1.5vw 1vw;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.ligne:nth-child(event){
+    background-color: aquamarine;
 }
 .titre
 {
@@ -96,6 +101,12 @@ header
 {
     flex: 1;
     justify-content: center
+}
+.tailleG{
+    flex:2;
+}
+.tailleP{
+    flex:0.5;
 }
 /*bouton******************/  
 .divBTN{
@@ -179,6 +190,15 @@ a.btnIncription {
     color: #da6612;
 }
 /*bouton connexion*********/
+
+/****Inscription*****************************/
+.rowInscription{
+    flex-direction: row;
+}
+.rowInscription div{
+    flex:1;
+}
+
 
 /***Pannel Admin***********************************/
 
