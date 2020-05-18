@@ -1,7 +1,7 @@
 <?php
 if(!isset($_POST['pseudo']))
 {
-    require 'PHP/View/connexionHTML.php';
+    require 'PHP/VIEW/connexionHTML.php';
 }
 else
 {
