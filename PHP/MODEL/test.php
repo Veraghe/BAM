@@ -77,13 +77,13 @@ session_start();
 // EvenementManager::delete($e);OK
 
 //getListByDate
-$event="2020-06-10";
-$tab=EvenementManager::getListByDate($event);
-foreach($tab as $date)
-{
+// $event="2020-06-10";
+// $tab=EvenementManager::getListByDate($event);
+// foreach($tab as $date)
+// {
 
-    echo $date->toString()."\n";
+//     echo $date->toString()."\n";
 
-}
+// }
 //ok
 

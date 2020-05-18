@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <title>Page d'accueil</title>
-    <link href="https://fonts.googleapis.com/css?family=Neucha|Roboto+Condensed&display=swap" rel="stylesheet">
-
-    <link href="../CSS/calendrier.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../CSS/phone.css" rel="stylesheet" type="text/css" media="screen">
-    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <!--HEADER---------------------------------------------------------------------->
-    <header>
-        <div class="top pseudo">
-            <i class="fas fa-user-circle"></i>
-            <div class="nom">
-                <p>Bonjour</p>
-                <b>pseudo</b>
-            </div>
-        </div>
-        
-        <div class="centre top">
-            <div class="logo">
-                <img src="logoville.png" alt="logo de la ville">
-            </div>
-        </div>
-
-        <div class="gauche top"></div>
-    </header>
-    <!--AGENDA---------------------------------------------------------------------->
+ <!--AGENDA---------------------------------------------------------------------->
     <div class="centrerGlobal">
         <div class="global">
             <select name="categories" id="categories">
@@ -116,9 +83,3 @@
             </div>
         </div>
     </div>
-    <!--FOOTER---------------------------------------------------------------------->
-    <footer></footer>
-    <script src="../JS/calendrier.js"></script>
-</body>
-
-</html>

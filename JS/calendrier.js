@@ -1,12 +1,12 @@
 (function () {
-    cible = document.querySelector('.cible');
-    afficheDate = document.querySelector('.date');
-    objav = document.querySelector('.av');
+    cible = document.querySelector('.cible'); //contenu du calendrier
+    afficheDate = document.querySelector('.date'); //affiche date en haut du calendrier
+    objav = document.querySelector('.av'); //flèche avant, pour changer le mois
     objav.ref = "av";
-    objap = document.querySelector('.ap');
+    objap = document.querySelector('.ap'); //flèche aprés, pour changer le mois
     objap.ref = "ap";
     cpt = 0;
-    tabMois = new Array('Janv', 'Fev', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec');
+    tabMois = new Array('Janv', 'Fev', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec'); //tableau des mois aves leurs noms
 
     var calendar = function (mois) {
         tmpcalendar = new Date(); // objet date
@@ -23,7 +23,7 @@
         afficheDate.innerHTML = tabMois[parseInt(tmpcalendar.getMonth())] + " " + tmpcalendar.getFullYear();
         decalage = premier == 0 ? 7 : premier; // gestion du décalage 
         memomois = tmpcalendar.getMonth(); // recup mois en cours
-        for (j = 1; j < decalage; j++) { // rajoute les case vide pour le décalage
+        for (j = 1; j < decalage; j++) { // rajoute les cases vide pour le décalage
             cible.innerHTML += "<button></button>";
         }
         for (i = 1; i < 32; i++) { // affiche tous les jours du mois en cours
@@ -31,7 +31,6 @@
 
             if (tmpcalendar.getMonth() == memomois) { // on verifie qu'on reste sur le même mois
                 rajoutMois = memomois + 1 < 10 ? "0" + parseInt(memomois + 1) : parseInt(memomois + 1);
-
                 rajoutJour = tmpcalendar.getDate() < 10 ? "0" + parseInt(tmpcalendar.getDate()) : tmpcalendar.getDate();
                 dateEnCour = parseInt(tmpcalendar.getFullYear() + "" + rajoutMois + "" + rajoutJour);
                 console.log(dateEnCour + "/jour" + dateAujourdhui);
@@ -48,7 +47,7 @@
         tabDiv = document.querySelectorAll('.date');
         for (var i = 0; i < tabDiv.length; i++) {
             tabDiv[i].addEventListener("click", function () {
-                alert(this.id.split("/"))
+                alert(this.id.split("/")) // ici on va pour voir ajouter que si on click ça affiche la div de droite 
             }); // on ajoute l'événement click pour chaque jour
         }
     }

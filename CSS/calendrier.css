@@ -1,46 +1,61 @@
-body {
-
+.centrerGlobal{
+    display: flex;
+    justify-content: center;
+    background-color: #2a4798;
 }
-.calendrier{
-    width: 210px;
-    margin: 20px;
-    background-color: white;
+
+
+.global {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #2a4798;
+    align-items: center;
 }
 .contenu {
     display: flex;
 }
-
-.gauche,
-.droite {
+.gauche, .droite{
+    background-color: white;
+    margin: 3vw;
     flex: 1;
 }
+.calendrier{
+    width: 30vw;
+    margin: 20px;
+    background-color: white;
+}
+
 button {
-    width: 30px;
-    height: 30px;
+    width: 4.2857vw; /* width calendrier/7=witdth du button */
+    height: 50px;
     text-align: center;
-    line-height: 30px;
+    line-height: 50px;
     background-color: transparent;
-    /*background-color: rgb(170,170,200);*/
-    /*border: 1px white solid;*/
+    border: 1px white solid;
     float: left;
     border: none;
     box-sizing: border-box;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
 
-button:hover,
 button:hover {
     cursor: pointer;
 }
 
 button.active {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(241, 124, 28);
+    border-radius: 50%;
+    color: white;
 }
 
 .head {
-    /* background-color: rgb(160,160,60);*/
     display: flex;
     height: 32px;
     align-items: center;
+    margin-top: 2vw;
+    font-size: 1.5em;
 }
 
 .head div {
@@ -54,36 +69,82 @@ button.active {
 #ap {
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 1em;
 }
-
 .head2 {
     display: flex;
-    height: 32px;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.clear {
+    display: block;
+    zoom: 1;
+    min-height: 246px;
+}
+.clear:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+/*SOMMAIRE*********************************/
+.sommaire{
+    background-color: white;
+    min-height: 10vh;
+    margin-top: 2vw ;
+
+}
+.ligne-sommaire{
+    display: flex;
+    padding: 0 2vw;
 }
 
-section {
-    overflow: hidden;
+.ligne-sommaire .couleur-sommaire {
+    width: 10px;
+    height: 10px;
+    flex: 0.3;
+    margin:  5px 1vw;
+    border-radius: 20px;
+}
+/*Couleurs sommaire*/
+.ligne-sommaire .couleur-sommaire:nth-child(1){
+    background-color: #eda901;
+}
+.ligne-sommaire .couleur-sommaire:nth-child(3) {
+    background-color: #bf172e;
+}
+.ligne-sommaire .couleur-sommaire:nth-child(5) {
+    background-color: #1f7833;
+}
+.ligne-sommaire:nth-child(2) .couleur-sommaire:nth-child(1) {
+    background-color: #1d80c4;
+}
+.ligne-sommaire:nth-child(2) .couleur-sommaire:nth-child(3) {
+    background-color: #754494;
+}
+.ligne-sommaire:nth-child(2) .couleur-sommaire:nth-child(5) {
+    background-color: #da6612;
+}
+.ligne-sommaire:nth-child(3) .couleur-sommaire:nth-child(1) {
+    background-color: #e24792;
+}
+.ligne-sommaire:nth-child(3) .couleur-sommaire:nth-child(3) {
+    background-color: #404040;
+}
+.ligne-sommaire:nth-child(3) .couleur-sommaire:nth-child(5) {
+    background-color: #404040;
 }
 
-section p:first-child {
-    float: left;
-}
 
-section p:last-child {
-    float: right;
-}
-
-section button {
-    /*background-color: rgb(100,100,100);*/
-    color: white;
-}
-
-h2 {
-    /*background-color: rgb(240,240,160);*/
+.ligne-sommaire .categorie-sommaire {
+    flex: 1;
     text-align: center;
-    height: 30px;
-    line-height: 30px;
-    color: grey;
+    line-height: 20px;
 }
+
