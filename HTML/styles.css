@@ -35,13 +35,7 @@ header
 
 /***AGENDA****/
 
-.global
-{
-    display: flex;
-    flex-direction: column;
-    background-color: #2a4798;
-    align-items: center;
-}
+
 #categories
 {
     flex:1;
