@@ -8,11 +8,11 @@
                     <div class="colonne">
                         <div>
                             <label for="pseudo">Pseudo :</label>
-                            <input name="pseudo" type="text" id="pseudo" required pattern="^[A-ZÀ-Ý]{1}[a-zà-ý' -]*([ |-|'][A-ZÀ-Ý]{1}[a-zà-ý' -]*)?$"/>
+                            <input name="pseudo" type="text" id="pseudo" required pattern=""/>
                         </div>
                         <div>
                             <label for="motDePasse">Mot de passe : </label>
-                            <input type="password" id="motDePasse" name="motDePasse" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#\$%\^&\*+])[a-zA-Z\d!@#\$%\^&\*+]{8,}$"/>
+                            <input type="password" id="motDePasse" name="motDePasse" required pattern=""/>
                         </div>
                         <div>
                             <label for="confirm">Confirmation mot de passe : </label>
