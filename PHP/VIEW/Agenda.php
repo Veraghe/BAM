@@ -1,8 +1,10 @@
+
  <?php
 $categorie = CategorieManager::getList();
 $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégrer: Quand on CLICK sur une date sur le calendrier, ça affiche l'évenement à gauche. 
 
 ?>
+
  <!--AGENDA---------------------------------------------------------------------->
     <div class="centrerGlobal">
         <div class="global">

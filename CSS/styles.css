@@ -198,7 +198,12 @@ a.btnIncription {
 .rowInscription div{
     flex:1;
 }
-
+.espace1 {
+    margin-right: 1vw;
+}
+.espace2 {
+    margin-left: 1vw;
+}
 
 /***Pannel Admin***********************************/
 
