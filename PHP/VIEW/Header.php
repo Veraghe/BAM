@@ -2,7 +2,7 @@
     <!--HEADER---------------------------------------------------------------------->
     <header>
         <div class="top pseudo">
-            <i class="fas fa-user-circle"></i>
+            <a href="index.php?action=connexion"><i class="fas fa-user-circle"></i></a>
             <div class="nom">
                 <p>Bonjour</p>
                 <b>pseudo</b>
