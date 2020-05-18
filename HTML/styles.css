@@ -93,7 +93,6 @@ body
 {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #2a4798;
     color: white;
     padding: 1.8vh;
@@ -108,4 +107,40 @@ body
     font-size: 40px;
 }
 
+/***Connexion****/
 
+.formulaire
+{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 10vh;
+    padding: 3vh;
+    border-radius: 3vh;
+}
+.colonne
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+a
+{
+    display: flex;
+    justify-content: center;
+}
+
+/***Pannel Admin****/
+
+.admin
+{
+    background-color: white;
+    color: black;
+    border-radius: 3vh;
+}
+.btn
+{
+    padding: 6vh;
+    margin: 10vh;
+    
+}
