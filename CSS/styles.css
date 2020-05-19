@@ -59,8 +59,15 @@ header
 {
     flex: 1;
 }
+.logo{
+    display: flex;
+    justify-content: center;
+}
 /*DROITE*****/
-
+.droite2{
+    text-align: center;
+    
+}
 
 /***Tableau-Liste******************************/
 

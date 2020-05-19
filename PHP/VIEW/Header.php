@@ -30,7 +30,7 @@ $id = (isset($_SESSION['idUtilisateur'])) ? (int) $_SESSION['idUtilisateur'] :''
             </div>
         </div>
 
-        <div class="droite top">
+        <div class="droite2 top">
             <?php
             if($role==1 && $action!='connexion'){
             ?>  
