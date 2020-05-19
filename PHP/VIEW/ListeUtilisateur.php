@@ -8,7 +8,7 @@
     <div class="tableau">
             <div class="ligne">
                 <div class="bloc titre">Pseudo</div>
-                <div class="bloc titre">M. de P.</div>
+                <div class="bloc titre tailleG">M. de P.</div>
                 <div class="bloc titre">Nom</div>
                 <div class="bloc titre">Prénom</div>
                 <div class="bloc titre">Téléphone</div>
@@ -22,7 +22,7 @@
             foreach ($utilisateur as $elt) {
             echo'<div class="ligne">
                 <div class="bloc contenu">'.$elt->getPseudo().'</div>
-                <div class="bloc contenu">'.$elt->getMotDePasse().'</div>
+                <div class="bloc contenu tailleG scroll">'.$elt->getMotDePasse().'</div>
                 <div class="bloc contenu">'.$elt->getNomUtilisateur().'</div>
                 <div class="bloc contenu">'.$elt->getPrenomUtilisateur().'</div>
                 <div class="bloc contenu">'.$elt->getTelephoneUtilisateur().'</div>
@@ -34,5 +34,6 @@
             } ?>
          <div class="centrer divBTN">
             <a href="index.php?action=inscription&m=1" class="bouton centrer">Ajouter un utilisateur</a>
+            <a href="index.php?action=admin" class="bouton centrer">Retour</a>
         </div>
     </div>

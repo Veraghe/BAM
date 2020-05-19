@@ -30,7 +30,7 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
 
         <div class="droite top">
             <?php
-            if($role==1){
+            if($role==1 && $action!='connexion'){
             ?>  
             <a href="index.php?action=admin"><i class="fas fa-tasks"></i> Admin</a>  
             <?php

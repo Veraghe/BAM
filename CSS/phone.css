@@ -16,6 +16,11 @@
         /* width calendrier/7=witdth du button */
     }
 
+            /***Connexion***************************************/
+
+            .formulaire {
+                width: 80vw;
+            }
 
 }
 
@@ -37,6 +42,7 @@
         /* width calendrier/7=witdth du button */
     }
 
+
     /**Liste********************************************/
     .tableau {
         margin: 2vh 0;
@@ -44,9 +50,7 @@
         border-radius: 3vh;
     }
 
-    .ligne{
-        
-    }
+   
 }
 
 /* ------------------------------------------------------------------------- */
@@ -68,11 +72,8 @@
     }
 
 
-    /***Connexion***************************************/
 
-    .formulaire {
-        width: 80vw;
-    }
+
 
 }
 
@@ -110,5 +111,26 @@
         width: 14.28vw;
         /* width calendrier/7=width du button */
     }
+    /***Connexion*****************************/
+    .formulaire {
+        width: 95vw;
+        margin: 2vh;
+    }
 
+}
+/* ------------------------------------------------------------------------- */
+/* ----------------------------------------------MEDIA QUERIES 600px ---- */
+/* ------------------------------------------------------------------------- */
+
+@media screen and (max-width: 600px){
+    .rowInscription {
+        flex-direction: column;
+    }
+    .espace1 {
+        margin-right: 0vw;
+    }
+
+    .espace2 {
+        margin-left:0vw;
+    }
 }

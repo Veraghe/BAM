@@ -24,5 +24,6 @@
             } ?>
          <div class="centrer divBTN">
             <a href="index.php?action=categorie&m=1" class="bouton centrer">Ajouter une catégorie</a>
+            <a href="index.php?action=admin" class="bouton centrer">Retour</a>
         </div>
     </div>
