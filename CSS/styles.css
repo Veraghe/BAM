@@ -47,6 +47,11 @@ header
 .nomHeader b {
     color: black;
     font-size: 1em;
+    margin: 0;
+}
+.nomHeader a{
+    margin-top: 1vw;
+    font-size: 0.9em;
 }
 .centre
 {
