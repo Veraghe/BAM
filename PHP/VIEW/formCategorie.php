@@ -27,7 +27,7 @@ switch ($mode) {
     </div>
     <div class="center">
         <div class="formulaire">
-            <form method="post" action="index.php?action=FormCategorie&m=<?php echo $mode; ?>">
+            <form method="post" action="index.php?action=actionCategorie&m=<?php echo $mode; ?>">
             <?php 
             if ($mode !="1"){
             ?>
@@ -37,13 +37,21 @@ switch ($mode) {
             ?>
                     <div class="colonne">
                         <div> 
-                            <label for="text">Nom de la catégorie :</label>
-                            <input name="text" type="text" id="text" placeholder="Entrer le nom de votre catégorie" autofocus required <?php if ($mode==3){
+                            <label for="libelleCategorie">Nom de la catégorie :</label>
+                            <input name="libelleCategorie" type="text" id="libelleCategorie" placeholder="Entrer le nom de votre catégorie" autofocus required <?php if ($mode==3){
                                                                                                                                           echo "readonly";
                                                                                                                                         } ?> value="<?php if($mode !="1"){
                                                                                                                                             echo $var->getLibelleCategorie();
                                                                                                                                         }?>">                  
                                 
+                        </div>
+                        <div>
+                            <label for="couleurCategorie">Couleur :</label>
+                            <input type="color" name="couleurCategorie" id="couleurCategorie" required <?php if ($mode==3){
+                                                                                                                                          echo "readonly";
+                                                                                                                                        } ?> value="<?php if($mode !="1"){
+                                                                                                                                            echo $var->getCouleurCategorie();
+                                                                                                                                        }?>">
                         </div>
                     </div>
                 <div class="centrer">

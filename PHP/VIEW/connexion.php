@@ -21,7 +21,12 @@ else
             $_SESSION['nomUtilisateur']=$utilisateur->getNomUtilisateur();
             $_SESSION['prenomUtilisateur']=$utilisateur->getPrenomUtilisateur();
             $_SESSION['idUtilisateur']=$utilisateur->getIdUtilisateur();
-           
+            $_SESSION['role']=$utilisateur->getRole();
+           if($utilisateur->getRole()==1)
+           {
+               header('refresh:0.5,url=index.php?action=admin');
+           }
+           else
             header('refresh:0.5,url=index.php?action=default');
            
         }

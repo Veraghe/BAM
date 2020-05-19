@@ -28,5 +28,13 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
             </div>
         </div>
 
-        <div class="gauche top"></div>
+        <div class="gauche top">
+            <?php
+            if($role==1){
+            ?>  
+            <a href="index.php?action=admin">Admin</a>  
+            <?php
+            }
+            ?>
+        </div>
     </header>

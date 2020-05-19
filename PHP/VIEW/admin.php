@@ -8,4 +8,7 @@
         <a class="btn" href="index.php?action=listeUtilisateur">
             Les utilisateurs
         </a>
+        <a class="btn" href="index.php?action=listeCategorie">
+            Les catégories
+        </a>
     </section>

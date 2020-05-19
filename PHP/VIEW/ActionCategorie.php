@@ -2,13 +2,13 @@
 $mode=$_GET["m"];
 $c= new Categorie($_POST);
 switch($mode) {
-    case "ajout":
+    case "1":
         CategorieManager::add($c);
     break;
-    case "modif":
+    case "2":
         CategorieManager::update($c);
     break;
-    case "suppr":
+    case "3":
         CategorieManager::delete($c);
     break;
 }
