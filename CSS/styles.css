@@ -197,7 +197,14 @@ a.btnIncription {
     color: #da6612;
 }
 /*bouton connexion*********/
-
+/****Form************************************/
+/* type Couleur***/
+input#couleurCategorie{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    cursor: pointer;
+}
 /****Inscription*****************************/
 .rowInscription{
     flex-direction: row;
