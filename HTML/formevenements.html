@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page d'accueil</title>
+    <link href="https://fonts.googleapis.com/css?family=Neucha|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../CSS/calendrier.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="titre">
+        <p>Nouvel évènement</p>
+    </div>
+    <div class="formulaire">
+        <form method="post" action="index.php?action=">    
+            <fieldset>
+                <legend>Nouvel évènement</legend>
+                <div class="colonne">
+                    <div> 
+                        <label for="libelleEvenement">Nom de l'évènement :</label>
+                        <input name="libelleEvenement" type="text" id="libelleEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="DateEvenement">Date : </label>
+                        <input type="date" id="DateEvenement" name="DateEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="DescriptionEvenement">Description :</label>
+                        <input name="DescriptionEvenement" type="text" id="DescriptionEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="AuteurEvenement">Auteur de l'évènement :</label>
+                        <input name="AuteurEvenement" type="text" id="AuteurEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="LieuEvenement">Lieu : </label>
+                        <input type="text" id="LieuEvenement" name="LieuEvenement" required pattern/>
+                    </div>
+                    <div> 
+                        <label for="DateCreation">Date de création :</label>
+                        <input name="DateCreation" type="date" id="DateCreation" required pattern/>
+                    </div>
+                </div>
+            </fieldset> 
+            <div class="centrer">
+                <input class="bouton centrer" type="submit" value="Valider" />
+            </div>
+        </form>
+    </div>
+</body>

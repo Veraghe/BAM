@@ -39,33 +39,18 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                     </div>
                     <div class="clear"></div>
                     <div class="sommaire">
-                        <div class="ligne-sommaire">
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Concert</div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Manifestation</div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Culture</div>
-                        </div>
 
-                        <div class="ligne-sommaire">
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Sport</div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Marché</div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Jour Actuel</div>
-                        </div>
-
-                        <div class="ligne-sommaire">
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire">Plusieurs C.</div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire"></div>
-                            <div class="couleur-sommaire"></div>
-                            <div class="categorie-sommaire"></div>
-                        </div>
-                        <?php 
+                    <?php
+                        
+                        echo '<div class="ligne-sommaire2">';
+                             foreach($categorie as $elt){
+                                echo'<div><div style="background-color:'.$elt->getCouleurCategorie().';" class="couleur-sommaire2"></div>
+                                <div class="categorie-sommaire2">'.$elt->getLibelleCategorie().'</div></div>';
+                            } 
+                        echo'</div>';
+                        
+                       
+                        
                     if($pseudo !=null)
                     {
                        echo '<div class="centrer divBTN"><a href="index.php?action=listeEvenement" class="bouton">Gérer mes évènements</a></div>';
