@@ -24,7 +24,7 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
         
         <div class="centre top">
             <div class="logo">
-                <img src="IMAGES/logoville.png" alt="logo de la ville">
+               <a href="index.php?action=default"> <img src="IMAGES/logoville.png" alt="logo de la ville" ></a>
             </div>
         </div>
 

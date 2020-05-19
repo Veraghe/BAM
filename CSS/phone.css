@@ -2,22 +2,23 @@
 /* ----------------------------------------------MEDIA QUERIES 1200px ---- */
 /* ------------------------------------------------------------------------- */
 
-@media screen and (max-width: 1400px){
-        .global {
-            width: 70vw;
-        }
+@media screen and (max-width: 1400px) {
+    .global {
+        width: 70vw;
+    }
 
-        .calendrier {
-            width: 35vw;
-        }
+    .calendrier {
+        width: 35vw;
+    }
 
-        button {
-            width: 5vw;
-            /* width calendrier/7=witdth du button */
-        }
+    button {
+        width: 5vw;
+        /* width calendrier/7=witdth du button */
+    }
 
 
 }
+
 /* ------------------------------------------------------------------------- */
 /* ----------------------------------------------MEDIA QUERIES 1200px ---- */
 /* ------------------------------------------------------------------------- */
@@ -26,6 +27,7 @@
     .global {
         width: 80vw;
     }
+
     .calendrier {
         width: 40vw;
     }
@@ -35,8 +37,18 @@
         /* width calendrier/7=witdth du button */
     }
 
+    /**Liste********************************************/
+    .tableau {
+        margin: 2vh 0;
+        padding: 3vw 0vh;
+        border-radius: 3vh;
+    }
 
+    .ligne{
+        
+    }
 }
+
 /* ------------------------------------------------------------------------- */
 /* ----------------------------------------------MEDIA QUERIES 1000px ---- */
 /* ------------------------------------------------------------------------- */
@@ -56,11 +68,11 @@
     }
 
 
-        /***Connexion***************************************/
+    /***Connexion***************************************/
 
-        .formulaire {
-            width: 80vw;
-        }
+    .formulaire {
+        width: 80vw;
+    }
 
 }
 
@@ -73,19 +85,24 @@
     .global {
         width: 100vw;
     }
-    .contenu{
+
+    .contenu {
         flex-direction: column;
     }
+
     .calendrier {
         width: 85vw;
     }
-    .sommaire{
+
+    .sommaire {
         border-bottom: solid 10px #2a4798;
     }
-    .gauche{
+
+    .gauche {
         position: relative;
     }
-    .droite{
+
+    .droite {
         margin: 15vw 3vw 3vw 3vw;
     }
 
@@ -95,5 +112,3 @@
     }
 
 }
-
-
