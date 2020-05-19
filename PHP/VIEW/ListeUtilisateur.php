@@ -28,11 +28,11 @@
                 <div class="bloc contenu">'.$elt->getTelephoneUtilisateur().'</div>
                 <div class="bloc contenu tailleG">'.$elt->getEmailUtilisateur().'</div>
                 <div class="bloc contenu tailleP">'.$elt->getRole().'</div>
-                <div class="bloc contenu tailleP"><a href="index.php?action=inscription&m=modif&id='.$elt->getIdUtilisateur().'"><i class="fas fa-edit"></i></a></div>
-                <div class="bloc contenu tailleP"><a href="index.php?action=inscription&m=suppr&id='.$elt->getIdUtilisateur().'"><i class="fas fa-trash"></i></a></div>
+                <div class="bloc contenu tailleP"><a href="index.php?action=inscription&m=2&id='.$elt->getIdUtilisateur().'"><i class="fas fa-edit"></i></a></div>
+                <div class="bloc contenu tailleP"><a href="index.php?action=inscription&m=3&id='.$elt->getIdUtilisateur().'"><i class="fas fa-trash"></i></a></div>
             </div>'; 
             } ?>
          <div class="centrer divBTN">
-            <a href="index.php?action=inscription&m=ajout" class="bouton centrer">Ajouter un utilisateur</a>
+            <a href="index.php?action=inscription&m=1" class="bouton centrer">Ajouter un utilisateur</a>
         </div>
     </div>
