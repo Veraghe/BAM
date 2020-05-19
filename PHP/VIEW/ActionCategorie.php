@@ -1,16 +1,16 @@
 <?php
-$mode=$_GET["m"];
-$c= new Categorie($_POST);
-switch($mode) {
+$mode = $_GET["m"];
+$c = new Categorie($_POST);
+switch ($mode) {
     case "1":
         CategorieManager::add($c);
-    break;
+        break;
     case "2":
         CategorieManager::update($c);
-    break;
+        break;
     case "3":
         CategorieManager::delete($c);
-    break;
+        break;
 }
 
 header("location:index.php?action=listeCategorie");

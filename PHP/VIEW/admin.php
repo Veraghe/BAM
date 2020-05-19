@@ -2,7 +2,7 @@
         <p>Connexion</p>
     </div>
     <section class="admin">            
-        <a class="btn" href="index.php?action=ListeEvenement">
+        <a class="btn" href="index.php?action=listeEvenement">
             Les évenements
         </a>
         <a class="btn" href="index.php?action=listeUtilisateur">

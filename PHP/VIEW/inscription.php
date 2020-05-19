@@ -9,7 +9,7 @@ else
     $i=0;
 
     $pseudo=$_POST['pseudo'];
-    $password=md5($_POST['password']);
+    $motDePasse=md5($_POST['motDePasse']);
     $confirm=md5($_POST['confirm']);
 
     //on vérifie que le pseudo n'est pas dèjà utilisé
@@ -26,14 +26,14 @@ else
         }
     }
     //verification du mdp
-    if ($password != $confirm|| empty($confirm)|| empty($password))
+    if ($motDePasse != $confirm|| empty($confirm)|| empty($motDePasse))
     {
         $erreur .=" Le mot de passe est incorrect ou la confirmation ne correspond pas au mot de passe";
         $i++;
     }
     if($i==0) // si il n'y a pas d'erreurs
     {
-        $nouveauUtilisateur= new Utilisateur(['pseudo'=>$_POST['pseudo'], 'motDePasse'=>md5($_POST['password']),'nomUtilisateur'=>$_POST['nom'], 'prenomUtilisateur'=>$_POST['prenomUtilisateur'],'emailUtilisateur'=>$_POST['emailUtilisateur'],'telephoneUtilisateur'=>$_POST['telephoneUtilisateur']]);
+        $nouveauUtilisateur= new Utilisateur(['pseudo'=>$_POST['pseudo'], 'motDePasse'=>md5($_POST['motDePasse']),'nomUtilisateur'=>$_POST['nom'], 'prenomUtilisateur'=>$_POST['prenomUtilisateur'],'emailUtilisateur'=>$_POST['emailUtilisateur'],'telephoneUtilisateur'=>$_POST['telephoneUtilisateur']]);
         
         UtilisateurManager::add($nouveauUtilisateur);
 

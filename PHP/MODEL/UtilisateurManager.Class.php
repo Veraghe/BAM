@@ -38,18 +38,18 @@ class UtilisateurManager
         $db->exec("DELETE FROM utilisateurs WHERE idUtilisateur=" . $obj->getIdUtilisateur());
     }
 
-    // public static function getById($id)
-    // {
-    //     $db = DbConnect::getDb();
-    //     $id = (int) $id;
-    //     $q = $db->query("SELECT * FROM utilisateurs WHERE idUtilisateur=$id");
-    //     $results = $q->fetch(PDO::FETCH_ASSOC);
-    //     if ($results != false) {
-    //         return new Utilisateur($results);
-    //     } else {
-    //         return false;
-    //     }
-    // }
+    public static function getById($id)
+    {
+        $db = DbConnect::getDb();
+        $id = (int) $id;
+        $q = $db->query("SELECT * FROM utilisateurs WHERE idUtilisateur=$id");
+        $results = $q->fetch(PDO::FETCH_ASSOC);
+        if ($results != false) {
+            return new Utilisateur($results);
+        } else {
+            return false;
+        }
+    }
 
     public static function getByPseudo($pseudo) 
         {

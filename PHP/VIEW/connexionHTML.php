@@ -14,7 +14,7 @@
                         <input type="password" name="password" id="password" />
                         <div id="oeil"><i class="fas fa-eye"></i></div>
                     </div>
-            <a href="index.php?action=inscription&m=ajout" class="btnIncription">Pas encore inscrit ?</a>
+            <a href="index.php?action=inscription&m=1" class="btnIncription">Pas encore inscrit ?</a>
             <div class="centrer divBTN">
                 <input class="bouton centrer" type="submit" value="Connexion" />
             </div>
