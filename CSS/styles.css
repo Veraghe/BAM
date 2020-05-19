@@ -115,6 +115,10 @@ header
 .tailleP{
     flex:0.5;
 }
+.scroll{
+    overflow: scroll;
+    
+}
 /*bouton******************/  
 .divBTN{
     display: flex;
