@@ -44,7 +44,7 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                         
                         echo '<div class="ligne-sommaire2">';
                              foreach($categorie as $elt){
-                                echo'<div><div class="couleur-sommaire2"></div>
+                                echo'<div><div style="background-color:'.$elt->getCouleurCategorie().';" class="couleur-sommaire2"></div>
                                 <div class="categorie-sommaire2">'.$elt->getLibelleCategorie().'</div></div>';
                             } 
                         echo'</div>';
