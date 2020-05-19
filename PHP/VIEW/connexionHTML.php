@@ -7,11 +7,11 @@
         <form method="post" action="index.php?action=connexion">
                     <div>
                         <label for="pseudo">Pseudo :</label>
-                        <input name="pseudo" type="text" id="pseudo" pattern=""/>
+                        <input name="pseudo" type="text" id="pseudo" />
                     </div>
                     <div class="password">
                         <label for="password">Mot de Passe :</label>
-                        <input type="password" name="password" id="password" pattern=""/>
+                        <input type="password" name="password" id="password" />
                         <div id="oeil"><i class="fas fa-eye"></i></div>
                     </div>
             <a href="index.php?action=inscription&m=ajout" class="btnIncription">Pas encore inscrit ?</a>
