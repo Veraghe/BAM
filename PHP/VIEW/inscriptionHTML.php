@@ -5,7 +5,6 @@ $mode = $_GET["m"];
 if ($mode != "1") {
     $id = $_GET["id"];
     $var =UtilisateurManager::getById($id);
-    
 }
 
 switch ($mode) {
@@ -43,10 +42,11 @@ switch ($mode) {
                                                                                                       echo "readonly";
                                                                                                     }  if($mode !="1"){
                                                                                                         
-                                                                                                     echo 'value="'.$var->getPseudo().'"';
+                                                                                                     echo ' value="'.$var->getPseudo().'"';
                                                                                                     }?>/>
                         </div>
-                        <div>
+                        <?php if ($mode!=3){
+                        echo '<div>
                             <label for="motDePasse">Mot de passe : </label>
                             <input type="password" id="motDePasse" name="motDePasse" required />
                         </div>
@@ -54,7 +54,9 @@ switch ($mode) {
                             <label for="confirm">Confirmation mot de passe : </label>
                             <input type="password" id="confirm" name="confirm" required/>
 
-                        </div>
+                        </div>';
+                        }
+                        ?>
                         <div class="rowInscription">
                             <div class="espace1">
                                 <label for="nomUtilisateur">Nom :</label>
@@ -62,7 +64,7 @@ switch ($mode) {
                                                                                                                                                                                                                                     echo "readonly";
                                                                                                                                                                                                                                     }  if($mode !="1"){
                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                    echo 'value="'.$var->getNomUtilisateur().'"';
+                                                                                                                                                                                                                                    echo ' value="'.$var->getNomUtilisateur().'"';
                                                                                                                                                                                                                                     }?>/>
                             </div>
 
@@ -72,7 +74,7 @@ switch ($mode) {
                                                                                                                                                                                                                                     echo "readonly";
                                                                                                                                                                                                                                     }  if($mode !="1"){
                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                    echo 'value="'.$var->getPrenomUtilisateur().'"';
+                                                                                                                                                                                                                                    echo ' value="'.$var->getPrenomUtilisateur().'"';
                                                                                                                                                                                                                                     }?>/>
                             </div>
                         </div>                                                                                                                                                                                                               
@@ -82,15 +84,15 @@ switch ($mode) {
                                                                                                                                                                                                  echo "readonly";
                                                                                                                                                                                                  }  if($mode !="1"){
                                                                                                                                                                                                     
-                                                                                                                                                                                                echo 'value="'.$var->getEmailUtilisateur().'"';
+                                                                                                                                                                                                echo ' value="'.$var->getEmailUtilisateur().'"';
                                                                                                                                                                                                  }?>/>
                         <div>
                             <label for="telephoneUtilisateur">Téléphone :</label>
-                            <input name="telephoneUtilisateur" type="tel" id="telephoneUtilisateur" required pattern="(0|\+33) ?[1-9]([-. ]?[\d]{2}){4}$"<?php if ($mode==3){
+                            <input name="telephoneUtilisateur" type="tel" id="telephoneUtilisateur" required <?php if ($mode==3){
                                                                                                                                                                             echo "readonly";
                                                                                                                                                                             }  if($mode !="1"){
                                                                                                                                                                                 
-                                                                                                                                                                            echo 'value="'.$var->getTelephoneUtilisateur().'"';
+                                                                                                                                                                            echo ' value="'.$var->getTelephoneUtilisateur().'"';
                                                                                                                                                                             }?>/>
                         </div>
                     </div>

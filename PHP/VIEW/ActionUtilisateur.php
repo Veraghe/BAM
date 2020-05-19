@@ -1,7 +1,7 @@
 <?php
 $mode = $_GET["m"];
 $p = new Utilisateur($_POST);
-var_dump($p);
+
 switch ($mode) {
     case "1":
         UtilisateurManager::add($p);
@@ -17,9 +17,12 @@ switch ($mode) {
         UtilisateurManager::update($p);
         break;
     case "3":
+        $user=UtilisateurManager::getById($p->getIdUtilisateur());
+        $p->setMotDePasse($user->getMotDePasse());
         UtilisateurManager::delete($p);
         break;
 }
+var_dump($p);
 
 // if($role==1){
 //     header("location:index.php?action=listeUtilisateur");

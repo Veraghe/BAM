@@ -6,7 +6,7 @@ if(!isset($_POST['pseudo']))
 else
 {
     $message='';
-    if (empty($_POST['pseudo']) || empty($_POST['password']))
+    if (empty($_POST['pseudo']) || empty($_POST['motDePasse']))
     {
         $message='<p>Veuillez remplir tous les champs pour vous identifiez.</p>';
                   header("url=index.php?action=connexion");  
@@ -15,7 +15,7 @@ else
     {
         $utilisateur=UtilisateurManager::getByPseudo($_POST['pseudo']);
 
-    if($utilisateur->getMotDePasse()==md5($_POST['password']))
+    if($utilisateur->getMotDePasse()==md5($_POST['motDePasse']))
         {
             $_SESSION['pseudo']= $utilisateur->getPseudo();
             $_SESSION['nomUtilisateur']=$utilisateur->getNomUtilisateur();

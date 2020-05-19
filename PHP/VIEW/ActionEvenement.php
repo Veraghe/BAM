@@ -1,6 +1,7 @@
 <?php
 $mode =$_GET["m"];
 $e= new Evenement($_POST);
+var_dump($e);
 switch ($mode) {
     case "1":
         EvenementManager::add($e);
@@ -12,4 +13,4 @@ switch ($mode) {
         EvenementManager::delete($e);
     break;
 }
-header("location:index.php?action=listeEvenement");
+// header("location:index.php?action=listeEvenement");

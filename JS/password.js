@@ -1,5 +1,5 @@
 //afficher l'oeil dans la connexion.
-var mdp = document.getElementById("password");
+var mdp = document.getElementById("motDePasse");
 var oeil = document.getElementById("oeil");
 oeil.addEventListener("click", voirPassword);
 

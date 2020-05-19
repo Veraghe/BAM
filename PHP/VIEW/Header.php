@@ -3,6 +3,8 @@
 $role = (isset($_SESSION['role'])) ? (int) $_SESSION['role'] : 1;
 $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
 $action = (isset($_GET['action'])) ? $_GET['action'] : '';
+$id = (isset($_SESSION['idUtilisateur'])) ? (int) $_SESSION['idUtilisateur'] :'';
+
 
 ?>
 

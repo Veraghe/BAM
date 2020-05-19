@@ -8,7 +8,7 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
  <!--AGENDA---------------------------------------------------------------------->
     <div class="centrerGlobal">
         <div class="global">
-            <select name="categories" id="categories">
+            <select name="idCategorie" id="idCategorie">
                 <?php
                     foreach ($categorie as $elt) {
                         echo '<option value = "' . $elt->getIdCategorie() . '"';
