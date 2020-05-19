@@ -28,7 +28,7 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
             </div>
         </div>
 
-        <div class="droite top">
+        <div class="droite2 top">
             <?php
             if($role==1 && $action!='connexion'){
             ?>  
