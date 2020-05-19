@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page d'accueil</title>
+    <link href="https://fonts.googleapis.com/css?family=Neucha|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../CSS/calendrier.css" rel="stylesheet" type="text/css" media="screen">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="titre">
+        <p>Ajout d'une catégorie</p>
+    </div>
+    <div class="nom">Ajout d'une catégorie</div>
+    <div class="formulaire">
+        <form method="post" action="index.php?action=FormCategorie">    
+            <fieldset>
+                <legend>Ajout d'une catégorie</legend>
+                <div class="colonne">
+                    <div> 
+                        <label for="text">Nom de la nouvelle catégorie :</label>
+                        <input name="text" type="text" id="text" />
+                    </div>
+                </div>
+            </fieldset> 
+            <div class="centrer">
+                <input class="bouton centrer" type="submit" value="Valider" />
+            </div>
+        </form>
+    </div>
+</body>
