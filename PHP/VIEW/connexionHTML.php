@@ -10,8 +10,8 @@
                         <input name="pseudo" type="text" id="pseudo" />
                     </div>
                     <div class="password">
-                        <label for="motDePasse">Mot de Passe :</label>
-                        <input type="password" name="motDePasse" id="motDePasse" />
+                        <label for="password">Mot de Passe :</label>
+                        <input type="password" name="password" id="password" />
                         <div id="oeil"><i class="fas fa-eye"></i></div>
                     </div>
             <a href="index.php?action=inscription&m=ajout" class="btnIncription">Pas encore inscrit ?</a>
