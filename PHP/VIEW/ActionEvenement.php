@@ -2,13 +2,13 @@
 $mode =$_GET["m"];
 $e= new Evenement($_POST);
 switch ($mode) {
-    case "ajout":
+    case "1":
         EvenementManager::add($e);
     break;
-    case "modif":
+    case "2":
         EvenementManager::update($e);
     break;
-    case "suppr":
+    case "3":
         EvenementManager::delete($e);
     break;
 }

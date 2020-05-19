@@ -27,12 +27,12 @@ $evenement = EvenementManager::getList();
                 <div class="bloc contenu">'.$elt->getAuteurEvenement().'</div>
                 <div class="bloc contenu">'.$elt->getLieuEvenement().'</div>
                 <div class="bloc contenu tailleG">'.$elt->getDescriptionEvenement().'</div>
-                <div class="bloc contenu tailleP"><a href="index.php?action=formEvenement&m=modif&id='.$elt->getIdEvenement().'"><i class="fas fa-edit"></i></a></div>
-                <div class="bloc contenu tailleP"><a href="index.php?action=formEvenement&m=suppr&id='.$elt->getIdEvenement().'"><i class="fas fa-trash"></i></a></div>
+                <div class="bloc contenu tailleP"><a href="index.php?action=formEvenement&m=2&id='.$elt->getIdEvenement().'"><i class="fas fa-edit"></i></a></div>
+                <div class="bloc contenu tailleP"><a href="index.php?action=formEvenement&m=3&id='.$elt->getIdEvenement().'"><i class="fas fa-trash"></i></a></div>
             </div>'; 
             } ?>
 
          <div class="centrer divBTN">
-            <a href="index.php?action=formEvenement&m=ajout" class="bouton centrer">Ajouter un évènement</a>
+            <a href="index.php?action=formEvenement&m=1" class="bouton centrer">Ajouter un évènement</a>
         </div>
     </div>

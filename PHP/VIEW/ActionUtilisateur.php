@@ -2,13 +2,13 @@
 $mode = $_GET["m"];
 $p = new Utilisateur($_POST);
 switch ($mode) {
-    case "ajout":
+    case "1":
         UtilisateurManager::add($p);
         break;
-    case "modif":
+    case "2":
         UtilisateurManager::update($p);
         break;
-    case "suppr":
+    case "3":
         UtilisateurManager::delete($p);
         break;
 }
