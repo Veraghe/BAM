@@ -34,5 +34,6 @@
             } ?>
          <div class="centrer divBTN">
             <a href="index.php?action=inscription&m=1" class="bouton centrer">Ajouter un utilisateur</a>
+            <a href="index.php?action=admin" class="bouton centrer">Retour</a>
         </div>
     </div>
