@@ -29,15 +29,17 @@
     background-color: white;
     margin: 3vw;
     flex: 1;
-    border-radius: 20px 20px 0 0;
+    
 }
 .droite{
     margin: 3vw 3vw 3vw 0;
+    border-radius: 20px;
 }
 .gauche{
     position: sticky;
     max-height: 500px;
     top: 20px;
+    border-radius: 20px 20px 0 0;
 }
 .calendrier{
     width: 30vw;
