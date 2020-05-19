@@ -28,11 +28,11 @@ $action = (isset($_GET['action'])) ? $_GET['action'] : '';
             </div>
         </div>
 
-        <div class="gauche top">
+        <div class="droite top">
             <?php
             if($role==1){
             ?>  
-            <a href="index.php?action=admin">Admin</a>  
+            <a href="index.php?action=admin"><i class="fas fa-tasks"></i> Admin</a>  
             <?php
             }
             ?>
