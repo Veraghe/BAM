@@ -4,18 +4,20 @@ class CategorieManager
     public static function add(Categorie $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO categories (idCategorie,libelleCategorie) VALUES (:idCategorie,:libelleCategorie)");
+        $q = $db->prepare("INSERT INTO categories (idCategorie,libelleCategorie,couleurCategorie) VALUES (:idCategorie,:libelleCategorie,:couleurCategorie)");
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
         $q->bindValue(":libelleCategorie", $obj->getLibelleCategorie());
+        $q->bindValue(":couleurCategorie", $obj->getCouleurCategorie());
         $q->execute();
     }
 
     public static function update(Categorie $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE categories SET libelleCategorie=:libelleCategorie WHERE idCategorie=:idCategorie");
+        $q = $db->prepare("UPDATE categories SET libelleCategorie=:libelleCategorie, couleurCategorie=:couleurCategorie WHERE idCategorie=:idCategorie");
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
         $q->bindValue(":libelleCategorie", $obj->getLibelleCategorie());
+        $q->bindValue(":couleurCategorie", $obj->getCouleurCategorie());
         $q->execute();
     }
 

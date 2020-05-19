@@ -4,6 +4,7 @@ class Categorie
 /*******************************Attributs*******************************/
     private $_idCategorie;
     private $_libelleCategorie;
+    private $_couleurCategorie;
 
 /******************************Accesseurs*******************************/
 
@@ -25,6 +26,16 @@ class Categorie
     public function setLibelleCategorie($_libelleCategorie)
     {
         $this->_libelleCategorie = $_libelleCategorie;
+    }
+    
+    public function getCouleurCategorie()
+    {
+        return $this->_couleurCategorie;
+    }
+
+    public function setCouleurCategorie($_couleurCategorie)
+    {
+        $this->_couleurCategorie = $_couleurCategorie;
     }
 
 /*******************************Construct*******************************/
@@ -61,4 +72,6 @@ class Categorie
             return 0;
         }
     }
+
+  
 }
