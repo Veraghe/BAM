@@ -97,6 +97,7 @@ function calendrier () {
     calendar(cpt);
     objav.addEventListener("click", init);
     objap.addEventListener("click", init);
+    
 }
 calendrier();
 

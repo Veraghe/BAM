@@ -5,4 +5,5 @@ include "EvenementManager.Class.php";
 include "DbConnect.Class.php";
 // Parametre::init();
 DbConnect::init();
-echo json_encode(EvenementManager::getListByDate($date));
+$date=$_POST['dateEvenement'];
+echo json_encode(EvenementManager::getListByDateAPI($date));
