@@ -1,3 +1,16 @@
+const requ = new XMLHttpRequest();
+
+requ.onreadystatechange=function(event)
+{
+    if(this.readyState===XMLHttpRequest.DONE)
+    {
+        if (this.status===200)
+        {
+            console.log("Réponse: %s", this.responseText);
+            var 
+        }
+    }
+}
 function calendrier () {
     cible = document.querySelector('.cible'); //contenu du calendrier
     afficheDate = document.querySelector('.date'); //affiche date en haut du calendrier
