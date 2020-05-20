@@ -1,21 +1,21 @@
-const requ = new XMLHttpRequest();
-var idEven
-requ.onreadystatechange=function(event)
-{
-    if(this.readyState===XMLHttpRequest.DONE)
-    {
-        if (this.status===200)
-        {
-            console.log("Réponse: %s", this.responseText);
-            var 
-        }
-    }
-} 
-       //on envoi la requête
-        req.open('POST', '/03 - BAM/PHP/Model/date.php', true);
-        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var args = "idEvenement=" + idEven;
-        req.send(args);
+// const requ = new XMLHttpRequest();
+// var idEven
+// requ.onreadystatechange=function(event)
+// {
+//     if(this.readyState===XMLHttpRequest.DONE)
+//     {
+//         if (this.status===200)
+//         {
+//             console.log("Réponse: %s", this.responseText);
+//             var 
+//         }
+//     }
+// } 
+//        //on envoi la requête
+//         req.open('POST', '/03 - BAM/PHP/Model/date.php', true);
+//         req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//         var args = "idEvenement=" + idEven;
+//         req.send(args);
 
 
 function calendrier () {
