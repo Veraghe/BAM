@@ -1,5 +1,5 @@
 const requ = new XMLHttpRequest();
-var idEven
+var idEven=
 requ.onreadystatechange=function(event)
 {
     if(this.readyState===XMLHttpRequest.DONE)
@@ -7,15 +7,19 @@ requ.onreadystatechange=function(event)
         if (this.status===200)
         {
             console.log("Réponse: %s", this.responseText);
-            var 
+          
+        }
+        else
+        {
+            console.log('KO')
         }
     }
 } 
        //on envoi la requête
-        req.open('POST', '/03 - BAM/PHP/Model/date.php', true);
-        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        requ.open('POST', '/PHP/MODEL/date.php', true);
+        requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         var args = "idEvenement=" + idEven;
-        req.send(args);
+        requ.send(args);
 
 
 function calendrier () {
@@ -97,6 +101,7 @@ function calendrier () {
     calendar(cpt);
     objav.addEventListener("click", init);
     objap.addEventListener("click", init);
+    
 }
 calendrier();
 
