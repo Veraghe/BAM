@@ -135,7 +135,7 @@ class Evenement
 /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdEvenement() ." ". $this->getLibelleEvenement() ." ". $this->getDateEvenement() ." ". $this->getDescriptionEvenement() ." ". $this->getAuteurEvenement()." ". $this->getLieuEvenement() ." ". $this->getIdUtilisateur() ." ". $this->getIdCategorie();
+        return $this->getIdEvenement() ." ". $this->getLibelleEvenement() ." ". $this->getDateEvenement()->format("dd-mm-yy") ." ". $this->getDescriptionEvenement() ." ". $this->getAuteurEvenement()." ". $this->getLieuEvenement() ." ". $this->getIdUtilisateur() ." ". $this->getIdCategorie();
     }
 
 

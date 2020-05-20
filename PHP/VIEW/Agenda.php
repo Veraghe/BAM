@@ -59,14 +59,18 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                     ?>
                     </div>
                    
-                    </div>
+                </div>
                 <!--droite-------------------------------------->
                 <div class="droite" id="divDroite">
-                    <div class="jour">
-                        <p>Date du calendrier</p>
-                    </div>
                     
                     <?php
+                    foreach ($evenement as $elt) { //voir pour modifier le format de la date et enlever l'heure!!!
+                    echo'<div class="jour">
+    
+                        <p>'. $elt->getDateEvenement().'</p> 
+                    </div>';
+                    }
+
                     foreach ($evenement as $elt) {
                     echo '<div class="border1"></div>
                             <div class="article">
