@@ -65,6 +65,7 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                     <?php
                     foreach ($evenement as $elt) { //voir pour modifier le format de la date et enlever l'heure!!!
                     echo'<div class="jour">
+    
                         <p>'. $elt->getDateEvenement().'</p> 
                     </div>';
                     }
