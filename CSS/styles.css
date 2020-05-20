@@ -192,6 +192,10 @@ a.btnIncription {
     justify-content: center;
     margin-top: 1vw;
 }
+form div.colonne div select {
+    padding: 0.5vw 0;
+    text-indent: 10px;
+}
 /*oeil connexion*********/
 .password{
     position: relative;

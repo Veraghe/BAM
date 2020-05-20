@@ -13,7 +13,7 @@
     background-color: #2a4798;
     align-items: center;
 }
-#idCategorie {
+.global #idCategorie {
     flex: 1;
     margin-top: 20px;
     width: 300px;
