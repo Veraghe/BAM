@@ -1,5 +1,5 @@
 const requ = new XMLHttpRequest();
-
+var idEven
 requ.onreadystatechange=function(event)
 {
     if(this.readyState===XMLHttpRequest.DONE)
@@ -10,7 +10,14 @@ requ.onreadystatechange=function(event)
             var 
         }
     }
-}
+} 
+       //on envoi la requête
+        req.open('POST', '/03 - BAM/PHP/Model/date.php', true);
+        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        var args = "idEvenement=" + idEven;
+        req.send(args);
+
+
 function calendrier () {
     cible = document.querySelector('.cible'); //contenu du calendrier
     afficheDate = document.querySelector('.date'); //affiche date en haut du calendrier
