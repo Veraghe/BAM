@@ -72,6 +72,12 @@ button.active {
     color: white;
     padding: 0;
 }
+button.event {
+    border: white solid 3px;
+    border-radius: 50px;
+    color: white;
+    padding: 0;
+}
 .head {
     display: flex;
     height: 32px;
@@ -150,7 +156,7 @@ button.active {
 
 /************* DROITE******************************/
 .droite{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     padding: 1vw 3vw;

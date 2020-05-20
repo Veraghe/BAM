@@ -1,4 +1,4 @@
-(function () {
+function calendrier () {
     cible = document.querySelector('.cible'); //contenu du calendrier
     afficheDate = document.querySelector('.date'); //affiche date en haut du calendrier
     objav = document.querySelector('.av'); //flèche avant, pour changer le mois
@@ -7,6 +7,7 @@
     objap.ref = "ap";
     cpt = 0;
     tabMois = new Array('Janv', 'Fev', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept', 'Oct', 'Nov', 'Dec'); //tableau des mois aves leurs noms
+    divDroite= document.getElementById('divDroite')
 
     var calendar = function (mois) {
         tmpcalendar = new Date(); // objet date
@@ -34,20 +35,30 @@
                 rajoutJour = tmpcalendar.getDate() < 10 ? "0" + parseInt(tmpcalendar.getDate()) : tmpcalendar.getDate();
                 dateEnCour = parseInt(tmpcalendar.getFullYear() + "" + rajoutMois + "" + rajoutJour);
                 console.log(dateEnCour + "/jour" + dateAujourdhui);
-                recup = rajoutJour + "/" + rajoutMois + "/" + tmpcalendar.getUTCFullYear();
+                recup = tmpcalendar.getUTCFullYear() + "-" + rajoutMois + "-" + rajoutJour ;
                 if (i == jour && mois == 0) { // on présente différemment le jour en cours
                     cible.innerHTML += "<button class='active date' id='" + recup + "'>" + i + "</button>";
                 } else if (dateEnCour < dateAujourdhui) {
                     cible.innerHTML += "<button class='date verrou' disabled id='" + recup + "'>" + i + "</button>";
+                    
                 } else {
-                    cible.innerHTML += "<button class='date' id='" + recup + "'>" + i + "</button>";
+                    couleurBouton=rechercheEvenement(recup)
+                   
+                    if(couleurBouton!=undefined){
+                        cible.innerHTML += "<button class='date event' id='" + recup + "'>" + i + "</button>";
+                        document.getElementById(recup).style.backgroundColor=couleurBouton
+                    }
+                    else{
+                        cible.innerHTML += "<button class='date' id='" + recup + "'>" + i + "</button>";
+                    }
+                    
                 }
             }
         }
         tabDiv = document.querySelectorAll('.date');
         for (var i = 0; i < tabDiv.length; i++) {
             tabDiv[i].addEventListener("click", function () {
-                alert(this.id.split("/")) // ici on va pour voir ajouter que si on click ça affiche la div de droite 
+                divDroite.style.display='flex' // ici on affiche la div droite au moment du click
             }); // on ajoute l'événement click pour chaque jour
         }
     }
@@ -66,4 +77,15 @@
     calendar(cpt);
     objav.addEventListener("click", init);
     objap.addEventListener("click", init);
-}).call(this);
+}
+calendrier();
+
+
+function rechercheEvenement(dateEvent){// reçoit une date , recherche les évènements associer à cette date et renvoit la classe associer à la couleur de la catégorie
+    //recherche des évènements liés à cette date
+    
+    //recherche des catégories des évènements
+    //déduction de la classe associée
+    if (dateEvent=='2020-05-21')
+    return 'red';
+}

@@ -9,7 +9,7 @@ switch ($mode) {
     case "2":
         if($p->getMotDePasse()== null){
             $original= UtilisateurManager::getById($p->getIdUtilisateur());
-            $p->setMotDePasse($original->getMotDePasse());
+            $p->setMotDePasse(md5($original->getMotDePasse()));
         }
         else{
             $p->setMotDePasse(md5($p->getMotDePasse()));
@@ -18,16 +18,16 @@ switch ($mode) {
         break;
     case "3":
         $user=UtilisateurManager::getById($p->getIdUtilisateur());
-        $p->setMotDePasse($user->getMotDePasse());
+        $p->setMotDePasse(md5($user->getMotDePasse()));
         UtilisateurManager::delete($p);
         break;
 }
-var_dump($p);
+// var_dump($p);
 
-// if($role==1){
-//     header("location:index.php?action=listeUtilisateur");
-// }
-// else{
-//     header("location:index.php?action=default");
-// }
+if($role==1){
+    header("location:index.php?action=listeUtilisateur");
+}
+else{
+    header("location:index.php?action=default");
+}
 

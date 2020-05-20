@@ -61,7 +61,7 @@ $evenement = EvenementManager::getListByDate('2020-05-16'); //voir pour intégre
                    
                     </div>
                 <!--droite-------------------------------------->
-                <div class="droite">
+                <div class="droite" id="divDroite">
                     <div class="jour">
                         <p>Date du calendrier</p>
                     </div>
